@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package mainPackage;
+package gui;
 import javax.swing.ImageIcon;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -12,6 +12,8 @@ import java.awt.Toolkit;
 import java.sql.*;
 import java.util.logging.Logger;
 import java.util.logging.Level;
+import db.ConnectionManager;
+import cmd.ControllerLogin;
 
 
 /**
@@ -48,51 +50,7 @@ public class LoginCoffee extends javax.swing.JFrame {
         jLabel6.setIcon(i);
     }
     
-    private boolean autentikasi(String username, String password){
-        Connection connection = null;
-        PreparedStatement statement = null;
-        ResultSet rs = null;
-        ConnectionManager conMan = new ConnectionManager();
-        
-        try {
-            connection = conMan.logOn();
-            String sql = "SELECT * FROM account WHERE username = ? AND password = ?";
-            statement = connection.prepareStatement(sql);
-            statement.setString(1, username);
-            statement.setString(2, password);
-            rs = statement.executeQuery();
-            
-            if (rs.next()) {
-                String dbUsername = rs.getString("username");
-                String dbPassword = rs.getString("password");
-                
-                if (dbUsername.equals("admin") && dbPassword.equals("morningadm")) {
-                    return true;
-                }
-            }
-            
-            return false;
-        } catch (SQLException e){
-            Logger.getLogger(LoginCoffee.class.getName()).log(Level.SEVERE, null, e);
-            return false;
-        } finally {
-            try {
-                if (rs != null) {
-                    rs.close();
-                }
-                if (statement != null) {
-                    statement.close();
-                }
-                if (connection != null) {
-                    conMan.logOff();
-                }
-            } catch (SQLException e) {
-                Logger.getLogger(LoginCoffee.class.getName()).log(Level.SEVERE, null, e);
-
-            }
-        }
-        
-    }
+    
     
     
     
@@ -111,11 +69,11 @@ public class LoginCoffee extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         login_btn = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        password_tf = new javax.swing.JPasswordField();
         username_tf = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        password_tf = new javax.swing.JPasswordField();
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/desain-removebg-preview (1).png"))); // NOI18N
 
@@ -125,9 +83,11 @@ public class LoginCoffee extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(239, 167, 40));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/coffee_rmbg.png"))); // NOI18N
         jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 400, 400));
 
         login_btn.setBackground(new java.awt.Color(153, 102, 0));
         login_btn.setFont(new java.awt.Font("Futura Bk BT", 0, 18)); // NOI18N
@@ -137,95 +97,45 @@ public class LoginCoffee extends javax.swing.JFrame {
                 login_btnActionPerformed(evt);
             }
         });
+        jPanel1.add(login_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 650, 125, 39));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/desain-removebg-preview (1).png"))); // NOI18N
         jLabel6.setText("jLabel6");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-60, 40, 351, 359));
+        jPanel1.add(username_tf, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 480, 179, 43));
 
         jLabel4.setFont(new java.awt.Font("Futura Bk BT", 0, 18)); // NOI18N
         jLabel4.setText("Username");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 490, 85, 30));
 
         jLabel3.setFont(new java.awt.Font("Futura Bk BT", 0, 18)); // NOI18N
         jLabel3.setText("Password");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 560, 85, 30));
 
         jLabel2.setFont(new java.awt.Font("GeoSlab703 Md BT", 1, 36)); // NOI18N
         jLabel2.setText("Hello!");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 410, -1, -1));
+        jPanel1.add(password_tf, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 560, 180, 40));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(login_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(442, 442, 442))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(username_tf, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(password_tf, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(415, 415, 415))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(314, 314, 314))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(444, 444, 444))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(username_tf, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(password_tf, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
-                .addComponent(login_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59))
-        );
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 820));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 750));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void login_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_login_btnActionPerformed
-        
+        ControllerLogin cmdLogin = new ControllerLogin();
         String username = username_tf.getText();
         char[] passwordChars = password_tf.getPassword();
         String password = new String(passwordChars);
 
         // autentikasi user
-        if (autentikasi(username, password) == true) {
+        if (cmdLogin.autentikasi(username, password) == true) {
             dispose();
             // Membuat objek dari page baru
             AdminPage admin = new AdminPage();
             // atur visibilitas dari page baru
             admin.setVisible(true); 
-        } else if(autentikasi(username, password) == false) {
+        } else if(cmdLogin.autentikasi(username, password) == false) {
             dispose();
             // Membuat objek dari page baru
             MainMenu main = new MainMenu();
@@ -235,6 +145,7 @@ public class LoginCoffee extends javax.swing.JFrame {
         else {
             JOptionPane.showMessageDialog(this, "Username atau password salah", "Login gagal", JOptionPane.ERROR_MESSAGE);
         }
+        
         
     }//GEN-LAST:event_login_btnActionPerformed
 
