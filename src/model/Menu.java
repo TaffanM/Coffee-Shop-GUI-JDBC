@@ -13,15 +13,17 @@ public class Menu {
     private String nama_menu;
     private String additional;
     private int harga;
+    private int stok;
 
     public Menu() {
     }
 
-    public Menu(int ID_menu, String nama_menu, String additional, int harga) {
+    public Menu(int ID_menu, String nama_menu, String additional, int harga, int stok) {
         this.ID_menu = ID_menu;
         this.nama_menu = nama_menu;
         this.additional = additional;
         this.harga = harga;
+        this.stok = stok;
     }
 
     public int getID_menu() {
@@ -55,6 +57,15 @@ public class Menu {
     public void setHarga(int harga) {
         this.harga = harga;
     }
+
+    public int getStok() {
+        return stok;
+    }
+
+    public void setStok(int stok) {
+        this.stok = stok;
+    }
+
     
     
     

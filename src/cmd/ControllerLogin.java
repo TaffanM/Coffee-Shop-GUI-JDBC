@@ -14,18 +14,19 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import model.Account;
 /**
  *
  * @author user
  */
 public class ControllerLogin {
     
-    public boolean autentikasi(String username, String password){
+    public void autentikasi(String username, String password, LoginCoffee login) {
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet rs = null;
         ConnectionManager conMan = new ConnectionManager();
-        
+
         try {
             connection = conMan.logOn();
             String sql = "SELECT * FROM account WHERE username = ? AND password = ?";
@@ -33,20 +34,34 @@ public class ControllerLogin {
             statement.setString(1, username);
             statement.setString(2, password);
             rs = statement.executeQuery();
-            
+
             if (rs.next()) {
                 String dbUsername = rs.getString("username");
                 String dbPassword = rs.getString("password");
-                
-                if (dbUsername.equals("admin") && dbPassword.equals("morningadm")) {
-                    return true;
+                String dbTipe = rs.getString("tipe");
+
+                if (dbTipe.equals("admin") && dbUsername.equals(username) && dbPassword.equals(password)) {
+                    login.dispose();
+                    // Membuat objek dari page baru
+                    AdminPage admin = new AdminPage();
+                    // atur visibilitas dari page baru
+                    admin.setVisible(true);
+                    JOptionPane.showMessageDialog(admin, "Anda berhasil Login, Selamat Datang " + dbUsername, "Succeed!", JOptionPane.PLAIN_MESSAGE);
+                } else if (dbTipe.equals("user") && dbUsername.equals(username) && dbPassword.equals(password)) {
+                    login.dispose();
+                    MainMenu menu = new MainMenu();
+                    menu.setVisible(true);
+                    JOptionPane.showMessageDialog(menu, "Anda berhasil Login, Selamat Datang " + dbUsername, "Succeed!", JOptionPane.PLAIN_MESSAGE);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Username atau password salah", "Login gagal", JOptionPane.ERROR_MESSAGE);
                 }
+            } else {
+                JOptionPane.showMessageDialog(null, "Username atau password salah", "Login gagal", JOptionPane.ERROR_MESSAGE);
             }
-            
-            return false;
-        } catch (SQLException e){
+
+        } catch (SQLException e) {
             Logger.getLogger(LoginCoffee.class.getName()).log(Level.SEVERE, null, e);
-            return false;
+
         } finally {
             try {
                 if (rs != null) {
@@ -60,9 +75,9 @@ public class ControllerLogin {
                 }
             } catch (SQLException e) {
                 Logger.getLogger(LoginCoffee.class.getName()).log(Level.SEVERE, null, e);
-
             }
         }
-        
     }
+
+
 }

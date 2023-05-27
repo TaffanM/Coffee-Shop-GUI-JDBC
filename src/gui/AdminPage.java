@@ -4,8 +4,13 @@
  */
 package gui;
 import cmd.ControllerAccount;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.Timer;
 import model.Account;
 /**
  *
@@ -18,6 +23,27 @@ public class AdminPage extends javax.swing.JFrame {
      */
     public AdminPage() {
         initComponents();
+        times();
+    }
+    
+    Timer t;
+    SimpleDateFormat st;
+    
+    private void times() {
+        
+        
+        t = new Timer(0, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+                Date dt = new Date();
+                st = new SimpleDateFormat("hh:mm:ss a");
+                
+                String tt = st.format(dt);
+                lbl_clock.setText(tt);
+            }
+        });
+        t.start();
     }
     
     private void displayAcc() {
@@ -48,6 +74,7 @@ public class AdminPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        adminTabbed = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         accountTable = new javax.swing.JTable();
@@ -56,12 +83,34 @@ public class AdminPage extends javax.swing.JFrame {
         update_btn = new javax.swing.JButton();
         delete_btn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        accountTable1 = new javax.swing.JTable();
+        display_btn1 = new javax.swing.JButton();
+        create_btn1 = new javax.swing.JButton();
+        update_btn1 = new javax.swing.JButton();
+        delete_btn1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        accountTable2 = new javax.swing.JTable();
+        display_btn2 = new javax.swing.JButton();
+        create_btn2 = new javax.swing.JButton();
+        update_btn2 = new javax.swing.JButton();
+        delete_btn2 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
         logoff_btn = new javax.swing.JButton();
+        menu_btn = new javax.swing.JButton();
+        receipt_btn = new javax.swing.JButton();
+        lbl_clock = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        accountTable.setForeground(new java.awt.Color(204, 153, 0));
         accountTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -75,7 +124,7 @@ public class AdminPage extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(accountTable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(324, 123, 604, 472));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 604, 472));
 
         display_btn.setText("Display");
         display_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -83,10 +132,15 @@ public class AdminPage extends javax.swing.JFrame {
                 display_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(display_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 670, 103, 35));
+        jPanel1.add(display_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 670, 103, 35));
 
         create_btn.setText("Create");
-        jPanel1.add(create_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 669, 103, 35));
+        create_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                create_btnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(create_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 670, 103, 35));
 
         update_btn.setText("Update");
         update_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -94,7 +148,7 @@ public class AdminPage extends javax.swing.JFrame {
                 update_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(update_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 670, 103, 35));
+        jPanel1.add(update_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 670, 103, 35));
 
         delete_btn.setText("Delete");
         delete_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -102,11 +156,130 @@ public class AdminPage extends javax.swing.JFrame {
                 delete_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(delete_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 670, 103, 35));
+        jPanel1.add(delete_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 670, 103, 35));
 
         jLabel1.setFont(new java.awt.Font("Poppins", 0, 18)); // NOI18N
         jLabel1.setText("CRUD Account's Table");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 60, 200, 40));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 200, 40));
+
+        adminTabbed.addTab("Account", jPanel1);
+
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        accountTable1.setForeground(new java.awt.Color(204, 153, 0));
+        accountTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "ID Menu", "Nama Menu", "Additional", "Harga", "Stok"
+            }
+        ));
+        jScrollPane2.setViewportView(accountTable1);
+
+        jPanel5.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 604, 472));
+
+        display_btn1.setText("Display");
+        display_btn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                display_btn1ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(display_btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 670, 103, 35));
+
+        create_btn1.setText("Create");
+        create_btn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                create_btn1ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(create_btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 670, 103, 35));
+
+        update_btn1.setText("Update");
+        update_btn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                update_btn1ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(update_btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 670, 103, 35));
+
+        delete_btn1.setText("Delete");
+        delete_btn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delete_btn1ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(delete_btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 670, 103, 35));
+
+        jLabel2.setFont(new java.awt.Font("Poppins", 0, 18)); // NOI18N
+        jLabel2.setText("CRUD Menu's Table");
+        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 200, 40));
+
+        adminTabbed.addTab("Menu", jPanel5);
+
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        accountTable2.setForeground(new java.awt.Color(204, 153, 0));
+        accountTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "ID Pelanggan", "Nama", "Username", "Password", "Tipe"
+            }
+        ));
+        jScrollPane3.setViewportView(accountTable2);
+
+        jPanel6.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 604, 472));
+
+        display_btn2.setText("Display");
+        display_btn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                display_btn2ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(display_btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 670, 103, 35));
+
+        create_btn2.setText("Create");
+        create_btn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                create_btn2ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(create_btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 670, 103, 35));
+
+        update_btn2.setText("Update");
+        update_btn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                update_btn2ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(update_btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 670, 103, 35));
+
+        delete_btn2.setText("Delete");
+        delete_btn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delete_btn2ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(delete_btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 670, 103, 35));
+
+        jLabel3.setFont(new java.awt.Font("Poppins", 0, 18)); // NOI18N
+        jLabel3.setText("CRUD Receipt's Table");
+        jPanel6.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 200, 40));
+
+        adminTabbed.addTab("Receipt", jPanel6);
+
+        jPanel2.setBackground(new java.awt.Color(153, 102, 0));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         logoff_btn.setText("Logoff");
         logoff_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -114,17 +287,50 @@ public class AdminPage extends javax.swing.JFrame {
                 logoff_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(logoff_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 760, 80, 30));
+        jPanel2.add(logoff_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 480, 100, 50));
+
+        menu_btn.setText("Menu");
+        menu_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu_btnActionPerformed(evt);
+            }
+        });
+        jPanel2.add(menu_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, 100, 50));
+
+        receipt_btn.setText("Receipt");
+        receipt_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                receipt_btnActionPerformed(evt);
+            }
+        });
+        jPanel2.add(receipt_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 100, 50));
+
+        lbl_clock.setBackground(new java.awt.Color(255, 255, 255));
+        lbl_clock.setFont(new java.awt.Font("Futura Bk BT", 0, 18)); // NOI18N
+        lbl_clock.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_clock.setText("0");
+        jPanel2.add(lbl_clock, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 120, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1147, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(adminTabbed, javax.swing.GroupLayout.PREFERRED_SIZE, 1034, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 833, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(adminTabbed, javax.swing.GroupLayout.PREFERRED_SIZE, 779, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 6, Short.MAX_VALUE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         pack();
@@ -135,9 +341,27 @@ public class AdminPage extends javax.swing.JFrame {
     }//GEN-LAST:event_display_btnActionPerformed
 
     private void logoff_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoff_btnActionPerformed
-        dispose();
-        LoginCoffee login = new LoginCoffee();
-        login.setVisible(true);
+
+        int choice = JOptionPane.showConfirmDialog(null, "Anda yakin untuk keluar?", "Confirmation", JOptionPane.YES_NO_OPTION);
+
+        if (choice == JOptionPane.YES_OPTION) {
+            // User confirmed, navigate back to the login page
+
+
+            LoginCoffee login = new LoginCoffee();
+            login.setVisible(true);
+
+
+            // Close or hide the current form if needed
+            this.dispose();
+
+            JOptionPane.showMessageDialog(rootPane, "Anda berhasil logout!");
+
+        } else {
+            System.out.println("Pengguna membatalkan logoff");
+        }
+        
+        
     }//GEN-LAST:event_logoff_btnActionPerformed
 
     private void delete_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete_btnActionPerformed
@@ -147,75 +371,111 @@ public class AdminPage extends javax.swing.JFrame {
         // Convert ID_pelanggan to int
         int ID_pelangganInt = Integer.parseInt(ID_pelanggan);
 
-        // query command SQL
-        String query = "DELETE FROM account WHERE ID_pelanggan='" + ID_pelangganInt + "'";
-
         ControllerAccount cmdAcc = new ControllerAccount();
-        cmdAcc.deleteAccount(ID_pelangganInt);
-        displayAcc();
+        int result = cmdAcc.deleteAccount(ID_pelangganInt);
+        
+        if (result > 0) {
+           displayAcc();
+        } else {
+           JOptionPane.showMessageDialog(null, "Terjadi kesalahan. Mohon ulang kembali", "Error", JOptionPane.ERROR_MESSAGE);
+
+        }
+        
     }//GEN-LAST:event_delete_btnActionPerformed
 
     private void update_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update_btnActionPerformed
-                                                   
-        // inisialisasi array dan variable
-        String[] attribut = {"Nama", "Username", "password", "Tipe"};
-        String ID_pelanggan;
-
-        // membuat JOptionPane sebagai interface pengubahan data
-        ID_pelanggan = JOptionPane.showInputDialog(rootPane, "Masukkan ID pelanggan yang akan diubah", "Update data", JOptionPane.PLAIN_MESSAGE);
-        int opsi = JOptionPane.showOptionDialog(null, "Pilih atribut yang ingin diubah", "Ubah Data", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, attribut, attribut[0]);
-
-
-        // Menggunakan statement switch untuk update attribut yang dipilih
-        String attribute = "";
-
-        switch (opsi) {
-            case 0:
-                attribute = "nama";
-                break;
-            case 1:
-                attribute = "tipe_pelanggan";
-                break;
-            case 2:
-                attribute = "alamat_pelanggan";
-                break;
-            case 3:
-                attribute = "harga_tagihan";
-                break;
-            default:
-                break;
-        }
-
-        String value = JOptionPane.showInputDialog("Masukkan data baru " + attribute);
-
-        // query command SQL
-        String query = "UPDATE tagihan set "+attribute+"='"+value+"' WHERE ID_pelanggan='"+ID_pelanggan+"'";
-
         ControllerAccount cmdAcc = new ControllerAccount();
+        Account account = new Account();
+        int result = cmdAcc.updateAccount(account);
 
-        // Update the account attribute
-        switch (opsi) {
-            case 0:
-                account.setNama(value);
-                break;
-            case 1:
-                account.setUsername(value);
-                break;
-            case 2:
-                account.setPassword(value);
-                break;
-            case 3:
-                account.setTipe(value);
-                break;
-            default:
-                break;
+        if (result > 0) {
+            // Account updated successfully
+            displayAcc();
+        } else {
+            // Error occurred while updating account
+            JOptionPane.showMessageDialog(null, "Terjadi kesalahan. Mohon ulang kembali", "Error", JOptionPane.ERROR_MESSAGE);
         }
+        
 
-        cmdAcc.updateAccount(account);
-        displayAcc();
-    
 
     }//GEN-LAST:event_update_btnActionPerformed
+
+    private void create_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_create_btnActionPerformed
+        String nama, username, password, tipe;
+
+        nama = JOptionPane.showInputDialog("Masukkan nama yang diinput : ");
+        username = JOptionPane.showInputDialog("Masukkan username yang diinput : ");
+        password = JOptionPane.showInputDialog("Masukkan password yang diinput : ");
+
+        String[] choices = {"admin", "user"};
+        tipe = (String) JOptionPane.showInputDialog(null, "Pilih tipe akun:", "Dropdown", JOptionPane.QUESTION_MESSAGE, null, choices, choices[0]);
+
+        if (nama != null && username != null && password != null && tipe != null) {
+            // All input fields are filled
+            Account account = new Account();
+            account.setNama(nama);
+            account.setUsername(username);
+            account.setPassword(password);
+            account.setTipe(tipe);
+
+            ControllerAccount cmdAcc = new ControllerAccount();
+            int result = cmdAcc.saveAccount(account);
+
+            if (result > 0) {
+                // Account saved successfully
+                displayAcc();
+            } else {
+                // Error occurred while saving account
+                JOptionPane.showMessageDialog(null, "Terjadi kesalahan. Mohon ulang kembali", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            // User membatalkan input atau meninggalkan textfield kosong
+            JOptionPane.showMessageDialog(null, "Pembuatan akun dibatalkan atau textfield kosong.", "Canceled or Empty Fields", JOptionPane.INFORMATION_MESSAGE);
+        }
+        
+        displayAcc();
+        
+    }//GEN-LAST:event_create_btnActionPerformed
+
+    private void menu_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_btnActionPerformed
+        adminTabbed.setSelectedIndex(1);
+    }//GEN-LAST:event_menu_btnActionPerformed
+
+    private void receipt_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_receipt_btnActionPerformed
+        adminTabbed.setSelectedIndex(2);
+    }//GEN-LAST:event_receipt_btnActionPerformed
+
+    private void display_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_display_btn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_display_btn1ActionPerformed
+
+    private void create_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_create_btn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_create_btn1ActionPerformed
+
+    private void update_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update_btn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_update_btn1ActionPerformed
+
+    private void delete_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete_btn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_delete_btn1ActionPerformed
+
+    private void display_btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_display_btn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_display_btn2ActionPerformed
+
+    private void create_btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_create_btn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_create_btn2ActionPerformed
+
+    private void update_btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update_btn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_update_btn2ActionPerformed
+
+    private void delete_btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete_btn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_delete_btn2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -254,13 +514,34 @@ public class AdminPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable accountTable;
+    private javax.swing.JTable accountTable1;
+    private javax.swing.JTable accountTable2;
+    private javax.swing.JTabbedPane adminTabbed;
     private javax.swing.JButton create_btn;
+    private javax.swing.JButton create_btn1;
+    private javax.swing.JButton create_btn2;
     private javax.swing.JButton delete_btn;
+    private javax.swing.JButton delete_btn1;
+    private javax.swing.JButton delete_btn2;
     private javax.swing.JButton display_btn;
+    private javax.swing.JButton display_btn1;
+    private javax.swing.JButton display_btn2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JLabel lbl_clock;
     private javax.swing.JButton logoff_btn;
+    private javax.swing.JButton menu_btn;
+    private javax.swing.JButton receipt_btn;
     private javax.swing.JButton update_btn;
+    private javax.swing.JButton update_btn1;
+    private javax.swing.JButton update_btn2;
     // End of variables declaration//GEN-END:variables
 }

@@ -9,6 +9,12 @@ package model;
  * @author user
  */
 public class Account {
+    
+    public enum AccountType {
+        admin,
+        user;
+    }
+    
     private int ID_pelanggan;
     private String nama;
     private String username;
@@ -57,7 +63,7 @@ public class Account {
     public void setPassword(String password) {
         this.password = password;
     }
-
+   
     public String getTipe() {
         return tipe;
     }
@@ -66,7 +72,5 @@ public class Account {
         this.tipe = tipe;
     }
 
-    
-    
     
 }

@@ -4,15 +4,8 @@
  */
 package gui;
 import javax.swing.ImageIcon;
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.Image;
 import java.awt.Toolkit;
-import java.sql.*;
-import java.util.logging.Logger;
-import java.util.logging.Level;
-import db.ConnectionManager;
 import cmd.ControllerLogin;
 
 
@@ -50,11 +43,6 @@ public class LoginCoffee extends javax.swing.JFrame {
         jLabel6.setIcon(i);
     }
     
-    
-    
-    
-    
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -74,6 +62,8 @@ public class LoginCoffee extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         password_tf = new javax.swing.JPasswordField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/desain-removebg-preview (1).png"))); // NOI18N
 
@@ -117,6 +107,18 @@ public class LoginCoffee extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 410, -1, -1));
         jPanel1.add(password_tf, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 560, 180, 40));
 
+        jLabel7.setText("Don't have any account ?");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 610, 150, -1));
+
+        jLabel8.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel8.setText("Register Now!");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 610, -1, -1));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 750));
 
         pack();
@@ -129,25 +131,14 @@ public class LoginCoffee extends javax.swing.JFrame {
         String password = new String(passwordChars);
 
         // autentikasi user
-        if (cmdLogin.autentikasi(username, password) == true) {
-            dispose();
-            // Membuat objek dari page baru
-            AdminPage admin = new AdminPage();
-            // atur visibilitas dari page baru
-            admin.setVisible(true); 
-        } else if(cmdLogin.autentikasi(username, password) == false) {
-            dispose();
-            // Membuat objek dari page baru
-            MainMenu main = new MainMenu();
-            // atur visibilitas dari page baru
-            main.setVisible(true); 
-        }
-        else {
-            JOptionPane.showMessageDialog(this, "Username atau password salah", "Login gagal", JOptionPane.ERROR_MESSAGE);
-        }
-        
-        
+        cmdLogin.autentikasi(username, password, this);
     }//GEN-LAST:event_login_btnActionPerformed
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        dispose();
+        RegisterPage reg = new RegisterPage();
+        reg.setVisible(true);
+    }//GEN-LAST:event_jLabel8MouseClicked
 
     /**
      * @param args the command line arguments
@@ -191,6 +182,8 @@ public class LoginCoffee extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton login_btn;
     private javax.swing.JPasswordField password_tf;
