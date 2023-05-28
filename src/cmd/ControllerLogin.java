@@ -46,17 +46,17 @@ public class ControllerLogin {
                     AdminPage admin = new AdminPage();
                     // atur visibilitas dari page baru
                     admin.setVisible(true);
-                    JOptionPane.showMessageDialog(admin, "Anda berhasil Login, Selamat Datang " + dbUsername, "Succeed!", JOptionPane.PLAIN_MESSAGE);
+                    JOptionPane.showMessageDialog(admin, "You are succesfully login, Welcome " + dbUsername, "Succeed!", JOptionPane.PLAIN_MESSAGE);
                 } else if (dbTipe.equals("user") && dbUsername.equals(username) && dbPassword.equals(password)) {
                     login.dispose();
                     MainMenu menu = new MainMenu();
                     menu.setVisible(true);
-                    JOptionPane.showMessageDialog(menu, "Anda berhasil Login, Selamat Datang " + dbUsername, "Succeed!", JOptionPane.PLAIN_MESSAGE);
+                    JOptionPane.showMessageDialog(menu, "You are succesfully login, Welcome " + dbUsername, "Succeed!", JOptionPane.PLAIN_MESSAGE);
                 } else {
-                    JOptionPane.showMessageDialog(null, "Username atau password salah", "Login gagal", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Username or password is wrong", "Login failed", JOptionPane.ERROR_MESSAGE);
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "Username atau password salah", "Login gagal", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Username or password is wrong", "Login failed", JOptionPane.ERROR_MESSAGE);
             }
 
         } catch (SQLException e) {

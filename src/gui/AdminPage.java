@@ -104,6 +104,7 @@ public class AdminPage extends javax.swing.JFrame {
         menu_btn = new javax.swing.JButton();
         receipt_btn = new javax.swing.JButton();
         lbl_clock = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -278,7 +279,7 @@ public class AdminPage extends javax.swing.JFrame {
 
         adminTabbed.addTab("Receipt", jPanel6);
 
-        jPanel2.setBackground(new java.awt.Color(153, 102, 0));
+        jPanel2.setBackground(new java.awt.Color(255, 204, 102));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         logoff_btn.setText("Logoff");
@@ -306,10 +307,14 @@ public class AdminPage extends javax.swing.JFrame {
         jPanel2.add(receipt_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 100, 50));
 
         lbl_clock.setBackground(new java.awt.Color(255, 255, 255));
-        lbl_clock.setFont(new java.awt.Font("Futura Bk BT", 0, 18)); // NOI18N
+        lbl_clock.setFont(new java.awt.Font("Futura Bk BT", 0, 24)); // NOI18N
         lbl_clock.setForeground(new java.awt.Color(255, 255, 255));
         lbl_clock.setText("0");
-        jPanel2.add(lbl_clock, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 120, 50));
+        jPanel2.add(lbl_clock, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 170, 60));
+
+        jLabel4.setFont(new java.awt.Font("Futura", 0, 24)); // NOI18N
+        jLabel4.setText("Admin Page");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -342,7 +347,7 @@ public class AdminPage extends javax.swing.JFrame {
 
     private void logoff_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoff_btnActionPerformed
 
-        int choice = JOptionPane.showConfirmDialog(null, "Anda yakin untuk keluar?", "Confirmation", JOptionPane.YES_NO_OPTION);
+        int choice = JOptionPane.showConfirmDialog(null, "Are you sure want to logout?", "Confirmation", JOptionPane.YES_NO_OPTION);
 
         if (choice == JOptionPane.YES_OPTION) {
             // User confirmed, navigate back to the login page
@@ -355,7 +360,7 @@ public class AdminPage extends javax.swing.JFrame {
             // Close or hide the current form if needed
             this.dispose();
 
-            JOptionPane.showMessageDialog(rootPane, "Anda berhasil logout!");
+            JOptionPane.showMessageDialog(rootPane, "You are succesfully logout!");
 
         } else {
             System.out.println("Pengguna membatalkan logoff");
@@ -529,6 +534,7 @@ public class AdminPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;

@@ -22,7 +22,7 @@ public class LoginCoffee extends javax.swing.JFrame {
     public LoginCoffee() {
         initComponents();
         setLogoImage();
-        setDecorImage();
+        
         
     }
     
@@ -35,13 +35,7 @@ public class LoginCoffee extends javax.swing.JFrame {
         jLabel1.setIcon(i);
     }
     
-    private void setDecorImage(){
-        ImageIcon image = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/projectcoffeeshop/img/desain-removebg-preview (1).png")));
-        Image img1 = image.getImage();
-        Image img2 = img1.getScaledInstance(jLabel6.getWidth(), jLabel6.getHeight(), Image.SCALE_DEFAULT);
-        ImageIcon i = new ImageIcon(img2);
-        jLabel6.setIcon(i);
-    }
+    
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -56,7 +50,6 @@ public class LoginCoffee extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         login_btn = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
         username_tf = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -64,6 +57,7 @@ public class LoginCoffee extends javax.swing.JFrame {
         password_tf = new javax.swing.JPasswordField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/desain-removebg-preview (1).png"))); // NOI18N
 
@@ -72,12 +66,12 @@ public class LoginCoffee extends javax.swing.JFrame {
         setFont(new java.awt.Font("Futura Bk BT", 0, 10)); // NOI18N
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(239, 167, 40));
+        jPanel1.setBackground(new java.awt.Color(255, 204, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/coffee_rmbg.png"))); // NOI18N
         jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 400, 400));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 400, 400));
 
         login_btn.setBackground(new java.awt.Color(153, 102, 0));
         login_btn.setFont(new java.awt.Font("Futura Bk BT", 0, 18)); // NOI18N
@@ -87,25 +81,21 @@ public class LoginCoffee extends javax.swing.JFrame {
                 login_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(login_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 650, 125, 39));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/desain-removebg-preview (1).png"))); // NOI18N
-        jLabel6.setText("jLabel6");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-60, 40, 351, 359));
-        jPanel1.add(username_tf, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 480, 179, 43));
+        jPanel1.add(login_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 650, 140, 39));
+        jPanel1.add(username_tf, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 480, 250, 43));
 
         jLabel4.setFont(new java.awt.Font("Futura Bk BT", 0, 18)); // NOI18N
         jLabel4.setText("Username");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 490, 85, 30));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 480, 90, 30));
 
         jLabel3.setFont(new java.awt.Font("Futura Bk BT", 0, 18)); // NOI18N
         jLabel3.setText("Password");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 560, 85, 30));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 560, 90, 30));
 
         jLabel2.setFont(new java.awt.Font("GeoSlab703 Md BT", 1, 36)); // NOI18N
-        jLabel2.setText("Hello!");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 410, -1, -1));
-        jPanel1.add(password_tf, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 560, 180, 40));
+        jLabel2.setText("Hello, Welcome!");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 420, -1, -1));
+        jPanel1.add(password_tf, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 560, 250, 40));
 
         jLabel7.setText("Don't have any account ?");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 610, 150, -1));
@@ -117,7 +107,10 @@ public class LoginCoffee extends javax.swing.JFrame {
                 jLabel8MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 610, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 610, -1, -1));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/decor2.png"))); // NOI18N
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 230, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 750));
 
@@ -181,9 +174,9 @@ public class LoginCoffee extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton login_btn;
     private javax.swing.JPasswordField password_tf;

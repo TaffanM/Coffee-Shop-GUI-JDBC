@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< Updated upstream
             <file>file:/D:/Projecc/Java%20projecc/ProjectCoffeeShop/src/gui/AdminPage.java</file>
             <file>file:/D:/Projecc/Java%20projecc/ProjectCoffeeShop/src/gui/MainMenu.java</file>
             <file>file:/D:/Projecc/Java%20projecc/ProjectCoffeeShop/src/model/Menu.java</file>
@@ -11,6 +12,11 @@
             <file>file:/D:/Projecc/Java%20projecc/ProjectCoffeeShop/src/model/Receipt.java</file>
             <file>file:/D:/Projecc/Java%20projecc/ProjectCoffeeShop/src/gui/LoginCoffee.java</file>
             <file>file:/D:/Projecc/Java%20projecc/ProjectCoffeeShop/src/cmd/ControllerLogin.java</file>
+=======
+            <file>file:/Users/Projecc/Java/Coffee-Shop-GUI-JDBC/src/mainPackage/ConnectionManager.java</file>
+            <file>file:/Users/Projecc/Java/Coffee-Shop-GUI-JDBC/src/mainPackage/LoginCoffee.java</file>
+            <file>file:/Users/Projecc/Java/Coffee-Shop-GUI-JDBC/src/mainPackage/AdminPage.java</file>
+>>>>>>> Stashed changes
         </group>
     </open-files>
 </project-private>

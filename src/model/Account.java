@@ -31,6 +31,13 @@ public class Account {
         this.password = password;
         this.tipe = tipe;
     }
+    
+    public Account(String nama, String username, String password, String tipe) {
+        this.nama = nama;
+        this.username = username;
+        this.password = password;
+        this.tipe = tipe;
+    }
 
     public int getID_pelanggan() {
         return ID_pelanggan;
