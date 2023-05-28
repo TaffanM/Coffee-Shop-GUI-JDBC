@@ -42,7 +42,7 @@ public class MainMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        about_btn = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
@@ -62,22 +62,40 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 204, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(255, 153, 51));
-        jButton1.setFont(new java.awt.Font("Futura", 0, 13)); // NOI18N
-        jButton1.setText("About Us");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(801, 302, 132, 60));
+        about_btn.setBackground(new java.awt.Color(255, 153, 51));
+        about_btn.setFont(new java.awt.Font("Futura", 0, 13)); // NOI18N
+        about_btn.setForeground(new java.awt.Color(255, 255, 255));
+        about_btn.setText("About Us");
+        about_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                about_btnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(about_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(801, 302, 132, 60));
 
         jButton2.setBackground(new java.awt.Color(255, 153, 51));
         jButton2.setFont(new java.awt.Font("Futura", 0, 13)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Menu");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(179, 302, 132, 60));
 
         jButton3.setBackground(new java.awt.Color(255, 153, 51));
         jButton3.setFont(new java.awt.Font("Futura", 0, 13)); // NOI18N
-        jButton3.setText("Receipt");
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("Our Cafe");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 302, 132, 60));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/2.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/cafe.png"))); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/3.png"))); // NOI18N
@@ -93,6 +111,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jButton4.setBackground(new java.awt.Color(255, 153, 51));
         jButton4.setFont(new java.awt.Font("Futura", 0, 13)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Logoff");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,6 +164,25 @@ public class MainMenu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void about_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_about_btnActionPerformed
+        AboutUs about = new AboutUs();
+        this.dispose();
+        about.setVisible(true);
+    }//GEN-LAST:event_about_btnActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        MenuPage menu = new MenuPage();
+        this.dispose();
+        menu.setVisible(true);
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        CafePage cafe = new CafePage();
+        this.dispose();
+        cafe.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -181,8 +219,8 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton about_btn;
     private javax.swing.JLabel date_lbl;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

@@ -61,7 +61,7 @@ public class RegisterPage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(204, 102, 0));
+        jPanel1.setBackground(new java.awt.Color(255, 153, 102));
 
         jLabel1.setFont(new java.awt.Font("Futura", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -118,6 +118,9 @@ public class RegisterPage extends javax.swing.JFrame {
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
         jPanel2.add(tf_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 180, -1));
 
+        finish_btn.setBackground(new java.awt.Color(255, 153, 51));
+        finish_btn.setFont(new java.awt.Font("Futura Bk BT", 0, 12)); // NOI18N
+        finish_btn.setForeground(new java.awt.Color(255, 255, 255));
         finish_btn.setText("Finish");
         finish_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,6 +129,9 @@ public class RegisterPage extends javax.swing.JFrame {
         });
         jPanel2.add(finish_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 400, 90, 35));
 
+        jButton3.setBackground(new java.awt.Color(255, 153, 102));
+        jButton3.setFont(new java.awt.Font("Futura Bk BT", 0, 12)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Return");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
