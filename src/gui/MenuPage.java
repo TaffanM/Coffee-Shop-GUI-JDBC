@@ -27,270 +27,47 @@ public class MenuPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel50 = new javax.swing.JPanel();
-        jLabel134 = new javax.swing.JLabel();
-        jPanel51 = new javax.swing.JPanel();
-        jLabel135 = new javax.swing.JLabel();
-        jLabel136 = new javax.swing.JLabel();
-        jLabel137 = new javax.swing.JLabel();
-        jPanel52 = new javax.swing.JPanel();
-        jLabel138 = new javax.swing.JLabel();
-        jLabel139 = new javax.swing.JLabel();
-        jLabel140 = new javax.swing.JLabel();
-        jPanel53 = new javax.swing.JPanel();
-        jLabel141 = new javax.swing.JLabel();
-        jLabel142 = new javax.swing.JLabel();
-        jLabel143 = new javax.swing.JLabel();
-        jPanel54 = new javax.swing.JPanel();
-        jLabel144 = new javax.swing.JLabel();
-        jLabel145 = new javax.swing.JLabel();
-        jLabel146 = new javax.swing.JLabel();
-        jPanel55 = new javax.swing.JPanel();
-        jLabel147 = new javax.swing.JLabel();
-        jLabel148 = new javax.swing.JLabel();
-        jLabel149 = new javax.swing.JLabel();
-        jPanel56 = new javax.swing.JPanel();
-        jLabel150 = new javax.swing.JLabel();
-        jLabel151 = new javax.swing.JLabel();
-        jLabel152 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jButton8 = new javax.swing.JButton();
-        scrollPane1 = new java.awt.ScrollPane();
-        jPanel50 = new javax.swing.JPanel();
-        jLabel134 = new javax.swing.JLabel();
-        jPanel51 = new javax.swing.JPanel();
-        jLabel135 = new javax.swing.JLabel();
-        jLabel136 = new javax.swing.JLabel();
-        jLabel137 = new javax.swing.JLabel();
-        jPanel52 = new javax.swing.JPanel();
-        jLabel138 = new javax.swing.JLabel();
-        jLabel139 = new javax.swing.JLabel();
-        jLabel140 = new javax.swing.JLabel();
-        jPanel53 = new javax.swing.JPanel();
-        jLabel141 = new javax.swing.JLabel();
-        jLabel142 = new javax.swing.JLabel();
-        jLabel143 = new javax.swing.JLabel();
-        jPanel54 = new javax.swing.JPanel();
-        jLabel144 = new javax.swing.JLabel();
-        jLabel145 = new javax.swing.JLabel();
-        jLabel146 = new javax.swing.JLabel();
-        jPanel55 = new javax.swing.JPanel();
-        jLabel147 = new javax.swing.JLabel();
-        jLabel148 = new javax.swing.JLabel();
-        jLabel149 = new javax.swing.JLabel();
-        jPanel56 = new javax.swing.JPanel();
-        jLabel150 = new javax.swing.JLabel();
-        jLabel151 = new javax.swing.JLabel();
-        jLabel152 = new javax.swing.JLabel();
-        jButton8 = new javax.swing.JButton();
-        jPanel50 = new javax.swing.JPanel();
-        jLabel134 = new javax.swing.JLabel();
-        jPanel51 = new javax.swing.JPanel();
-        jLabel135 = new javax.swing.JLabel();
-        jLabel136 = new javax.swing.JLabel();
-        jLabel137 = new javax.swing.JLabel();
-        jPanel52 = new javax.swing.JPanel();
-        jLabel138 = new javax.swing.JLabel();
-        jLabel139 = new javax.swing.JLabel();
-        jLabel140 = new javax.swing.JLabel();
-        jPanel53 = new javax.swing.JPanel();
-        jLabel141 = new javax.swing.JLabel();
-        jLabel142 = new javax.swing.JLabel();
-        jLabel143 = new javax.swing.JLabel();
-        jPanel54 = new javax.swing.JPanel();
-        jLabel144 = new javax.swing.JLabel();
-        jLabel145 = new javax.swing.JLabel();
-        jLabel146 = new javax.swing.JLabel();
-        jPanel55 = new javax.swing.JPanel();
-        jLabel147 = new javax.swing.JLabel();
-        jLabel148 = new javax.swing.JLabel();
-        jLabel149 = new javax.swing.JLabel();
-        jPanel56 = new javax.swing.JPanel();
-        jLabel150 = new javax.swing.JLabel();
-        jLabel151 = new javax.swing.JLabel();
-        jLabel152 = new javax.swing.JLabel();
-        jButton8 = new javax.swing.JButton();
-        jPanel50 = new javax.swing.JPanel();
-        jLabel134 = new javax.swing.JLabel();
-        jPanel51 = new javax.swing.JPanel();
-        jLabel135 = new javax.swing.JLabel();
-        jLabel136 = new javax.swing.JLabel();
-        jLabel137 = new javax.swing.JLabel();
-        jPanel52 = new javax.swing.JPanel();
-        jLabel138 = new javax.swing.JLabel();
-        jLabel139 = new javax.swing.JLabel();
-        jLabel140 = new javax.swing.JLabel();
-        jPanel53 = new javax.swing.JPanel();
-        jLabel141 = new javax.swing.JLabel();
-        jLabel142 = new javax.swing.JLabel();
-        jLabel143 = new javax.swing.JLabel();
-        jPanel54 = new javax.swing.JPanel();
-        jLabel144 = new javax.swing.JLabel();
-        jLabel145 = new javax.swing.JLabel();
-        jLabel146 = new javax.swing.JLabel();
-        jPanel55 = new javax.swing.JPanel();
-        jLabel147 = new javax.swing.JLabel();
-        jLabel148 = new javax.swing.JLabel();
-        jLabel149 = new javax.swing.JLabel();
-        jPanel56 = new javax.swing.JPanel();
-        jLabel150 = new javax.swing.JLabel();
-        jLabel151 = new javax.swing.JLabel();
-        jLabel152 = new javax.swing.JLabel();
-        jButton8 = new javax.swing.JButton();
-        jPanel50 = new javax.swing.JPanel();
-        jLabel134 = new javax.swing.JLabel();
-        jPanel51 = new javax.swing.JPanel();
-        jLabel135 = new javax.swing.JLabel();
-        jLabel136 = new javax.swing.JLabel();
-        jLabel137 = new javax.swing.JLabel();
-        jPanel52 = new javax.swing.JPanel();
-        jLabel138 = new javax.swing.JLabel();
-        jLabel139 = new javax.swing.JLabel();
-        jLabel140 = new javax.swing.JLabel();
-        jPanel53 = new javax.swing.JPanel();
-        jLabel141 = new javax.swing.JLabel();
-        jLabel142 = new javax.swing.JLabel();
-        jLabel143 = new javax.swing.JLabel();
-        jPanel54 = new javax.swing.JPanel();
-        jLabel144 = new javax.swing.JLabel();
-        jLabel145 = new javax.swing.JLabel();
-        jLabel146 = new javax.swing.JLabel();
-        jPanel55 = new javax.swing.JPanel();
-        jLabel147 = new javax.swing.JLabel();
-        jLabel148 = new javax.swing.JLabel();
-        jLabel149 = new javax.swing.JLabel();
-        jPanel56 = new javax.swing.JPanel();
-        jLabel150 = new javax.swing.JLabel();
-        jLabel151 = new javax.swing.JLabel();
-        jLabel152 = new javax.swing.JLabel();
-        jButton8 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFont(new java.awt.Font("Futura Bk BT", 0, 10)); // NOI18N
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel50.setBackground(new java.awt.Color(255, 204, 153));
+        jPanel50.setBackground(new java.awt.Color(255, 255, 255));
         jPanel50.setFont(new java.awt.Font("Futura Bk BT", 0, 12)); // NOI18N
+        jPanel50.setMinimumSize(new java.awt.Dimension(1130, 100));
+        jPanel50.setPreferredSize(new java.awt.Dimension(1130, 100));
         jPanel50.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel134.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/ourmenu.png"))); // NOI18N
-        jPanel50.add(jLabel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/ourmenu.png"))); // NOI18N
+        jPanel50.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 10, -1, 190));
 
-        jPanel51.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel51.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel51.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel135.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/cappucino.png"))); // NOI18N
-        jPanel51.add(jLabel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, -1));
-
-        jLabel136.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel136.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel136.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel136.setText("<html><body style='width: 200px; align-text: center;'>Savor the timeless delight of a cappuccino, a harmonious blend of espresso, steamed milk, and creamy foam. Indulge in its rich flavor and velvety texture, perfect for any time of day. </body></html> ");
-        jPanel51.add(jLabel136, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, -1));
-
-        jLabel137.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel137.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel137.setText("Cappucino");
-        jPanel51.add(jLabel137, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-
-        jPanel50.add(jPanel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 310, 560));
-
-        jPanel52.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel52.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel138.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel138.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel138.setText("<html><body style='width: 200px; align-text: center;'>Enjoy the classic Americano, a balanced and flavorful coffee made with espresso shots and hot water. Customize your cup with milk or sweeteners for a personalized twist. Start your day with this versatile and satisfying coffee experience.</body></html> ");
-        jPanel52.add(jLabel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, -1));
-
-        jLabel139.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/americano.png"))); // NOI18N
-        jPanel52.add(jLabel139, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, -1));
-
-        jLabel140.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel140.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel140.setText("Americano");
-        jPanel52.add(jLabel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-
-        jPanel50.add(jPanel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 310, 560));
-
-        jPanel53.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel53.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel53.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel141.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel141.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel141.setText("Latte");
-        jPanel53.add(jLabel141, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-
-        jLabel142.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel142.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel142.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel142.setText("<html><body style='width: 200px; align-text: center;'>Experience the luxurious indulgence of a latte, crafted with a shot of smooth espresso and topped with creamy steamed milk. Delight in its velvety texture and balanced flavor, creating a harmonious symphony for your taste buds. </body></html> ");
-        jPanel53.add(jLabel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel143.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/latte.png"))); // NOI18N
-        jPanel53.add(jLabel143, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, -1, -1));
-
-        jPanel50.add(jPanel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 970, 310, 560));
-
-        jPanel54.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel54.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel54.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel144.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel144.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel144.setText("Espresso");
-        jPanel54.add(jLabel144, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        jLabel145.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel145.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel145.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel145.setText("<html><body style='width: 200px; align-text: center;'>Savor the bold essence of pure espresso, a concentrated and intense coffee experience. Each shot is meticulously extracted to deliver a rich and robust flavor that awakens the senses. (*Hot only) </body></html> ");
-        jPanel54.add(jLabel145, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel146.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/espresso.png"))); // NOI18N
-        jPanel54.add(jLabel146, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, -1, -1));
-
-        jPanel50.add(jPanel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 970, 310, 560));
-
-        jPanel55.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel55.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel55.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel147.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel147.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel147.setText("Mocha");
-        jPanel55.add(jLabel147, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        jLabel148.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel148.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel148.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel148.setText("<html><body style='width: 200px; align-text: center;'>Indulge in the delightful fusion of rich espresso and decadent chocolate with a mocha. This irresistible blend of flavors combines the bittersweet notes of espresso with the smooth sweetness of chocolate, creating a harmonious symphony of taste.</body></html> ");
-        jPanel55.add(jLabel148, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel149.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/mocha.png"))); // NOI18N
-        jPanel55.add(jLabel149, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
-
-        jPanel50.add(jPanel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 1600, 310, 560));
-
-        jPanel56.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel56.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel56.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel150.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel150.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel150.setText("Vanilla Latte");
-        jPanel56.add(jLabel150, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        jLabel151.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel151.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel151.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel151.setText("<html><body style='width: 200px; align-text: center;'>Experience the delightful combination of smooth espresso, creamy steamed milk, and the sweet aroma of vanilla in a vanilla latte. This classic coffee beverage offers a perfect harmony of flavors, creating a luscious and comforting drink.</body></html> ");
-        jPanel56.add(jLabel151, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel152.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/vanilla.png"))); // NOI18N
-        jPanel56.add(jLabel152, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
-
-        jPanel50.add(jPanel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 1600, 310, 560));
+        jPanel1.setBackground(new java.awt.Color(255, 204, 153));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton8.setBackground(new java.awt.Color(255, 153, 51));
         jButton8.setFont(new java.awt.Font("Futura Bk BT", 0, 12)); // NOI18N
@@ -301,568 +78,120 @@ public class MenuPage extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        jPanel50.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 2300, 150, 50));
+        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 160, 60));
 
-        getContentPane().add(jPanel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1120, 2400));
-        jPanel50.getAccessibleContext().setAccessibleParent(scrollPane1);
+        jPanel50.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1130, 260));
 
-        jPanel50.setBackground(new java.awt.Color(255, 204, 153));
-        jPanel50.setFont(new java.awt.Font("Futura Bk BT", 0, 12)); // NOI18N
-        jPanel50.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel3.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(102, 51, 0));
+        jLabel3.setText("Bread");
+        jPanel50.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 410, 100, 20));
 
-        jLabel134.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/ourmenu.png"))); // NOI18N
-        jPanel50.add(jLabel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, -1, -1));
+        jLabel4.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(102, 51, 0));
+        jLabel4.setText("Americano");
+        jPanel50.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 560, -1, 20));
 
-        jPanel51.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel51.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel51.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel5.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(102, 51, 0));
+        jLabel5.setText("Cappucino");
+        jPanel50.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, -1, 20));
 
-        jLabel135.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/cappucino.png"))); // NOI18N
-        jPanel51.add(jLabel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, -1));
+        jLabel6.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(102, 51, 0));
+        jLabel6.setText("Cafe Latte");
+        jPanel50.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 620, -1, 20));
 
-        jLabel136.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel136.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel136.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel136.setText("<html><body style='width: 200px; align-text: center;'>Savor the timeless delight of a cappuccino, a harmonious blend of espresso, steamed milk, and creamy foam. Indulge in its rich flavor and velvety texture, perfect for any time of day. </body></html> ");
-        jPanel51.add(jLabel136, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, -1));
+        jLabel7.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(102, 51, 0));
+        jLabel7.setText("Mocha");
+        jPanel50.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 650, -1, 20));
 
-        jLabel137.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel137.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel137.setText("Cappucino");
-        jPanel51.add(jLabel137, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/CakeMenu.png"))); // NOI18N
+        jPanel50.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 460, -1, -1));
 
-        jPanel50.add(jPanel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 310, 560));
+        jLabel9.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(102, 51, 0));
+        jLabel9.setText(".................................................12");
+        jPanel50.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 410, 320, 20));
 
-        jPanel52.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel52.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel10.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(102, 51, 0));
+        jLabel10.setText("Dew Kuasong");
+        jPanel50.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 320, -1, 20));
 
-        jLabel138.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel138.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel138.setText("<html><body style='width: 200px; align-text: center;'>Enjoy the classic Americano, a balanced and flavorful coffee made with espresso shots and hot water. Customize your cup with milk or sweeteners for a personalized twist. Start your day with this versatile and satisfying coffee experience.</body></html> ");
-        jPanel52.add(jLabel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, -1));
+        jLabel11.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(102, 51, 0));
+        jLabel11.setText("Pudding (*Flavor in menu)");
+        jPanel50.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 350, 220, 20));
 
-        jLabel139.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/americano.png"))); // NOI18N
-        jPanel52.add(jLabel139, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, -1));
+        jLabel12.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(102, 51, 0));
+        jLabel12.setText("Cheesecake");
+        jPanel50.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 380, 100, 20));
 
-        jLabel140.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel140.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel140.setText("Americano");
-        jPanel52.add(jLabel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-
-        jPanel50.add(jPanel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 310, 560));
-
-        jPanel53.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel53.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel53.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel141.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel141.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel141.setText("Latte");
-        jPanel53.add(jLabel141, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-
-        jLabel142.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel142.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel142.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel142.setText("<html><body style='width: 200px; align-text: center;'>Experience the luxurious indulgence of a latte, crafted with a shot of smooth espresso and topped with creamy steamed milk. Delight in its velvety texture and balanced flavor, creating a harmonious symphony for your taste buds. </body></html> ");
-        jPanel53.add(jLabel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel143.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/latte.png"))); // NOI18N
-        jPanel53.add(jLabel143, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, -1, -1));
-
-        jPanel50.add(jPanel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 970, 310, 560));
-
-        jPanel54.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel54.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel54.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel144.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel144.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel144.setText("Espresso");
-        jPanel54.add(jLabel144, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        jLabel145.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel145.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel145.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel145.setText("<html><body style='width: 200px; align-text: center;'>Savor the bold essence of pure espresso, a concentrated and intense coffee experience. Each shot is meticulously extracted to deliver a rich and robust flavor that awakens the senses. (*Hot only) </body></html> ");
-        jPanel54.add(jLabel145, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel146.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/espresso.png"))); // NOI18N
-        jPanel54.add(jLabel146, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, -1, -1));
-
-        jPanel50.add(jPanel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 970, 310, 560));
-
-        jPanel55.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel55.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel55.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel147.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel147.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel147.setText("Mocha");
-        jPanel55.add(jLabel147, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        jLabel148.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel148.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel148.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel148.setText("<html><body style='width: 200px; align-text: center;'>Indulge in the delightful fusion of rich espresso and decadent chocolate with a mocha. This irresistible blend of flavors combines the bittersweet notes of espresso with the smooth sweetness of chocolate, creating a harmonious symphony of taste.</body></html> ");
-        jPanel55.add(jLabel148, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel149.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/mocha.png"))); // NOI18N
-        jPanel55.add(jLabel149, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
-
-        jPanel50.add(jPanel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 1600, 310, 560));
-
-        jPanel56.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel56.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel56.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel150.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel150.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel150.setText("Vanilla Latte");
-        jPanel56.add(jLabel150, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        jLabel151.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel151.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel151.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel151.setText("<html><body style='width: 200px; align-text: center;'>Experience the delightful combination of smooth espresso, creamy steamed milk, and the sweet aroma of vanilla in a vanilla latte. This classic coffee beverage offers a perfect harmony of flavors, creating a luscious and comforting drink.</body></html> ");
-        jPanel56.add(jLabel151, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel152.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/vanilla.png"))); // NOI18N
-        jPanel56.add(jLabel152, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
-
-        jPanel50.add(jPanel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 1600, 310, 560));
-
-        jButton8.setBackground(new java.awt.Color(255, 153, 51));
-        jButton8.setFont(new java.awt.Font("Futura Bk BT", 0, 12)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jButton8.setText("Return to Main Menu");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setBackground(new java.awt.Color(255, 153, 51));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Order Now!");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-        jPanel50.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 2300, 150, 50));
-
-        getContentPane().add(jPanel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1120, 2400));
-        jPanel50.getAccessibleContext().setAccessibleParent(scrollPane1);
-
-        jPanel50.setBackground(new java.awt.Color(255, 204, 153));
-        jPanel50.setFont(new java.awt.Font("Futura Bk BT", 0, 12)); // NOI18N
-        jPanel50.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel134.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/ourmenu.png"))); // NOI18N
-        jPanel50.add(jLabel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, -1, -1));
-
-        jPanel51.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel51.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel51.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel135.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/cappucino.png"))); // NOI18N
-        jPanel51.add(jLabel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, -1));
-
-        jLabel136.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel136.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel136.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel136.setText("<html><body style='width: 200px; align-text: center;'>Savor the timeless delight of a cappuccino, a harmonious blend of espresso, steamed milk, and creamy foam. Indulge in its rich flavor and velvety texture, perfect for any time of day. </body></html> ");
-        jPanel51.add(jLabel136, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, -1));
-
-        jLabel137.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel137.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel137.setText("Cappucino");
-        jPanel51.add(jLabel137, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-
-        jPanel50.add(jPanel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 310, 560));
-
-        jPanel52.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel52.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel138.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel138.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel138.setText("<html><body style='width: 200px; align-text: center;'>Enjoy the classic Americano, a balanced and flavorful coffee made with espresso shots and hot water. Customize your cup with milk or sweeteners for a personalized twist. Start your day with this versatile and satisfying coffee experience.</body></html> ");
-        jPanel52.add(jLabel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, -1));
-
-        jLabel139.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/americano.png"))); // NOI18N
-        jPanel52.add(jLabel139, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, -1));
-
-        jLabel140.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel140.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel140.setText("Americano");
-        jPanel52.add(jLabel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-
-        jPanel50.add(jPanel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 310, 560));
-
-        jPanel53.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel53.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel53.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel141.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel141.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel141.setText("Latte");
-        jPanel53.add(jLabel141, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-
-        jLabel142.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel142.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel142.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel142.setText("<html><body style='width: 200px; align-text: center;'>Experience the luxurious indulgence of a latte, crafted with a shot of smooth espresso and topped with creamy steamed milk. Delight in its velvety texture and balanced flavor, creating a harmonious symphony for your taste buds. </body></html> ");
-        jPanel53.add(jLabel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel143.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/latte.png"))); // NOI18N
-        jPanel53.add(jLabel143, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, -1, -1));
-
-        jPanel50.add(jPanel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 970, 310, 560));
-
-        jPanel54.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel54.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel54.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel144.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel144.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel144.setText("Espresso");
-        jPanel54.add(jLabel144, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        jLabel145.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel145.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel145.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel145.setText("<html><body style='width: 200px; align-text: center;'>Savor the bold essence of pure espresso, a concentrated and intense coffee experience. Each shot is meticulously extracted to deliver a rich and robust flavor that awakens the senses. (*Hot only) </body></html> ");
-        jPanel54.add(jLabel145, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel146.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/espresso.png"))); // NOI18N
-        jPanel54.add(jLabel146, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, -1, -1));
-
-        jPanel50.add(jPanel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 970, 310, 560));
-
-        jPanel55.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel55.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel55.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel147.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel147.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel147.setText("Mocha");
-        jPanel55.add(jLabel147, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        jLabel148.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel148.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel148.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel148.setText("<html><body style='width: 200px; align-text: center;'>Indulge in the delightful fusion of rich espresso and decadent chocolate with a mocha. This irresistible blend of flavors combines the bittersweet notes of espresso with the smooth sweetness of chocolate, creating a harmonious symphony of taste.</body></html> ");
-        jPanel55.add(jLabel148, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel149.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/mocha.png"))); // NOI18N
-        jPanel55.add(jLabel149, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
-
-        jPanel50.add(jPanel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 1600, 310, 560));
-
-        jPanel56.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel56.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel56.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel150.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel150.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel150.setText("Vanilla Latte");
-        jPanel56.add(jLabel150, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        jLabel151.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel151.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel151.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel151.setText("<html><body style='width: 200px; align-text: center;'>Experience the delightful combination of smooth espresso, creamy steamed milk, and the sweet aroma of vanilla in a vanilla latte. This classic coffee beverage offers a perfect harmony of flavors, creating a luscious and comforting drink.</body></html> ");
-        jPanel56.add(jLabel151, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel152.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/vanilla.png"))); // NOI18N
-        jPanel56.add(jLabel152, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
-
-        jPanel50.add(jPanel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 1600, 310, 560));
-
-        jButton8.setBackground(new java.awt.Color(255, 153, 51));
-        jButton8.setFont(new java.awt.Font("Futura Bk BT", 0, 12)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jButton8.setText("Return to Main Menu");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-        jPanel50.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 2300, 150, 50));
-
-        getContentPane().add(jPanel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1120, 2400));
-        jPanel50.getAccessibleContext().setAccessibleParent(scrollPane1);
-
-        jPanel50.setBackground(new java.awt.Color(255, 204, 153));
-        jPanel50.setFont(new java.awt.Font("Futura Bk BT", 0, 12)); // NOI18N
-        jPanel50.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel134.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/ourmenu.png"))); // NOI18N
-        jPanel50.add(jLabel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, -1, -1));
-
-        jPanel51.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel51.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel51.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel135.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/cappucino.png"))); // NOI18N
-        jPanel51.add(jLabel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, -1));
-
-        jLabel136.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel136.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel136.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel136.setText("<html><body style='width: 200px; align-text: center;'>Savor the timeless delight of a cappuccino, a harmonious blend of espresso, steamed milk, and creamy foam. Indulge in its rich flavor and velvety texture, perfect for any time of day. </body></html> ");
-        jPanel51.add(jLabel136, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, -1));
-
-        jLabel137.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel137.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel137.setText("Cappucino");
-        jPanel51.add(jLabel137, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-
-        jPanel50.add(jPanel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 310, 560));
-
-        jPanel52.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel52.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel138.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel138.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel138.setText("<html><body style='width: 200px; align-text: center;'>Enjoy the classic Americano, a balanced and flavorful coffee made with espresso shots and hot water. Customize your cup with milk or sweeteners for a personalized twist. Start your day with this versatile and satisfying coffee experience.</body></html> ");
-        jPanel52.add(jLabel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, -1));
-
-        jLabel139.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/americano.png"))); // NOI18N
-        jPanel52.add(jLabel139, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, -1));
-
-        jLabel140.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel140.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel140.setText("Americano");
-        jPanel52.add(jLabel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-
-        jPanel50.add(jPanel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 310, 560));
-
-        jPanel53.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel53.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel53.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel141.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel141.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel141.setText("Latte");
-        jPanel53.add(jLabel141, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-
-        jLabel142.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel142.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel142.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel142.setText("<html><body style='width: 200px; align-text: center;'>Experience the luxurious indulgence of a latte, crafted with a shot of smooth espresso and topped with creamy steamed milk. Delight in its velvety texture and balanced flavor, creating a harmonious symphony for your taste buds. </body></html> ");
-        jPanel53.add(jLabel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel143.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/latte.png"))); // NOI18N
-        jPanel53.add(jLabel143, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, -1, -1));
-
-        jPanel50.add(jPanel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 970, 310, 560));
-
-        jPanel54.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel54.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel54.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel144.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel144.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel144.setText("Espresso");
-        jPanel54.add(jLabel144, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        jLabel145.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel145.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel145.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel145.setText("<html><body style='width: 200px; align-text: center;'>Savor the bold essence of pure espresso, a concentrated and intense coffee experience. Each shot is meticulously extracted to deliver a rich and robust flavor that awakens the senses. (*Hot only) </body></html> ");
-        jPanel54.add(jLabel145, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel146.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/espresso.png"))); // NOI18N
-        jPanel54.add(jLabel146, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, -1, -1));
-
-        jPanel50.add(jPanel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 970, 310, 560));
-
-        jPanel55.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel55.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel55.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel147.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel147.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel147.setText("Mocha");
-        jPanel55.add(jLabel147, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        jLabel148.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel148.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel148.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel148.setText("<html><body style='width: 200px; align-text: center;'>Indulge in the delightful fusion of rich espresso and decadent chocolate with a mocha. This irresistible blend of flavors combines the bittersweet notes of espresso with the smooth sweetness of chocolate, creating a harmonious symphony of taste.</body></html> ");
-        jPanel55.add(jLabel148, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel149.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/mocha.png"))); // NOI18N
-        jPanel55.add(jLabel149, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
-
-        jPanel50.add(jPanel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 1600, 310, 560));
-
-        jPanel56.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel56.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel56.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel150.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel150.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel150.setText("Vanilla Latte");
-        jPanel56.add(jLabel150, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        jLabel151.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel151.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel151.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel151.setText("<html><body style='width: 200px; align-text: center;'>Experience the delightful combination of smooth espresso, creamy steamed milk, and the sweet aroma of vanilla in a vanilla latte. This classic coffee beverage offers a perfect harmony of flavors, creating a luscious and comforting drink.</body></html> ");
-        jPanel56.add(jLabel151, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel152.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/vanilla.png"))); // NOI18N
-        jPanel56.add(jLabel152, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
-
-        jPanel50.add(jPanel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 1600, 310, 560));
-
-        jButton8.setBackground(new java.awt.Color(255, 153, 51));
-        jButton8.setFont(new java.awt.Font("Futura Bk BT", 0, 12)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jButton8.setText("Return to Main Menu");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-        jPanel50.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 2300, 150, 50));
-
-        getContentPane().add(jPanel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1120, 2400));
-        jPanel50.getAccessibleContext().setAccessibleParent(scrollPane1);
-
-        jPanel50.setBackground(new java.awt.Color(255, 204, 153));
-        jPanel50.setFont(new java.awt.Font("Futura Bk BT", 0, 12)); // NOI18N
-        jPanel50.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel134.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/ourmenu.png"))); // NOI18N
-        jPanel50.add(jLabel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, -1, -1));
-
-        jPanel51.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel51.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel51.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel135.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/cappucino.png"))); // NOI18N
-        jPanel51.add(jLabel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, -1));
-
-        jLabel136.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel136.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel136.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel136.setText("<html><body style='width: 200px; align-text: center;'>Savor the timeless delight of a cappuccino, a harmonious blend of espresso, steamed milk, and creamy foam. Indulge in its rich flavor and velvety texture, perfect for any time of day. </body></html> ");
-        jPanel51.add(jLabel136, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, -1));
-
-        jLabel137.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel137.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel137.setText("Cappucino");
-        jPanel51.add(jLabel137, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-
-        jPanel50.add(jPanel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 310, 560));
-
-        jPanel52.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel52.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel138.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel138.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel138.setText("<html><body style='width: 200px; align-text: center;'>Enjoy the classic Americano, a balanced and flavorful coffee made with espresso shots and hot water. Customize your cup with milk or sweeteners for a personalized twist. Start your day with this versatile and satisfying coffee experience.</body></html> ");
-        jPanel52.add(jLabel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, -1));
-
-        jLabel139.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/americano.png"))); // NOI18N
-        jPanel52.add(jLabel139, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, -1));
-
-        jLabel140.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel140.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel140.setText("Americano");
-        jPanel52.add(jLabel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-
-        jPanel50.add(jPanel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 310, 560));
-
-        jPanel53.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel53.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel53.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel141.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel141.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel141.setText("Latte");
-        jPanel53.add(jLabel141, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-
-        jLabel142.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel142.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel142.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel142.setText("<html><body style='width: 200px; align-text: center;'>Experience the luxurious indulgence of a latte, crafted with a shot of smooth espresso and topped with creamy steamed milk. Delight in its velvety texture and balanced flavor, creating a harmonious symphony for your taste buds. </body></html> ");
-        jPanel53.add(jLabel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel143.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/latte.png"))); // NOI18N
-        jPanel53.add(jLabel143, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, -1, -1));
-
-        jPanel50.add(jPanel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 970, 310, 560));
-
-        jPanel54.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel54.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel54.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel144.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel144.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel144.setText("Espresso");
-        jPanel54.add(jLabel144, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        jLabel145.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel145.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel145.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel145.setText("<html><body style='width: 200px; align-text: center;'>Savor the bold essence of pure espresso, a concentrated and intense coffee experience. Each shot is meticulously extracted to deliver a rich and robust flavor that awakens the senses. (*Hot only) </body></html> ");
-        jPanel54.add(jLabel145, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel146.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/espresso.png"))); // NOI18N
-        jPanel54.add(jLabel146, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, -1, -1));
-
-        jPanel50.add(jPanel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 970, 310, 560));
-
-        jPanel55.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel55.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel55.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel147.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel147.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel147.setText("Mocha");
-        jPanel55.add(jLabel147, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        jLabel148.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel148.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel148.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel148.setText("<html><body style='width: 200px; align-text: center;'>Indulge in the delightful fusion of rich espresso and decadent chocolate with a mocha. This irresistible blend of flavors combines the bittersweet notes of espresso with the smooth sweetness of chocolate, creating a harmonious symphony of taste.</body></html> ");
-        jPanel55.add(jLabel148, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel149.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/mocha.png"))); // NOI18N
-        jPanel55.add(jLabel149, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
-
-        jPanel50.add(jPanel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 1600, 310, 560));
-
-        jPanel56.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel56.setPreferredSize(new java.awt.Dimension(313, 560));
-        jPanel56.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel150.setFont(new java.awt.Font("Futura Bk BT", 1, 24)); // NOI18N
-        jLabel150.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel150.setText("Vanilla Latte");
-        jPanel56.add(jLabel150, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        jLabel151.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel151.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel151.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel151.setText("<html><body style='width: 200px; align-text: center;'>Experience the delightful combination of smooth espresso, creamy steamed milk, and the sweet aroma of vanilla in a vanilla latte. This classic coffee beverage offers a perfect harmony of flavors, creating a luscious and comforting drink.</body></html> ");
-        jPanel56.add(jLabel151, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
-
-        jLabel152.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/vanilla.png"))); // NOI18N
-        jPanel56.add(jLabel152, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
-
-        jPanel50.add(jPanel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 1600, 310, 560));
-
-        jButton8.setBackground(new java.awt.Color(255, 153, 51));
-        jButton8.setFont(new java.awt.Font("Futura Bk BT", 0, 12)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jButton8.setText("Return to Main Menu");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-        jPanel50.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 2300, 150, 50));
-
-        getContentPane().add(jPanel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1120, 2400));
-        jPanel50.getAccessibleContext().setAccessibleParent(scrollPane1);
-
-        getContentPane().add(scrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1120, 2400));
+        jPanel50.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 560, 140, 60));
+
+        jLabel13.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(102, 51, 0));
+        jLabel13.setText("Aren Latte");
+        jPanel50.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 680, -1, 20));
+
+        jLabel14.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(102, 51, 0));
+        jLabel14.setText("......................................30");
+        jPanel50.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 320, 260, 20));
+
+        jLabel15.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(102, 51, 0));
+        jLabel15.setText("..........................26");
+        jPanel50.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 590, -1, 20));
+
+        jLabel16.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(102, 51, 0));
+        jLabel16.setText("..........................25");
+        jPanel50.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 620, -1, 20));
+
+        jLabel17.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(102, 51, 0));
+        jLabel17.setText("..........................30");
+        jPanel50.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 650, -1, 20));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/MenuDecor.png"))); // NOI18N
+        jPanel50.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, 370));
+
+        jLabel18.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(102, 51, 0));
+        jLabel18.setText("..........................20");
+        jPanel50.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 560, -1, 20));
+
+        jLabel19.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(102, 51, 0));
+        jLabel19.setText("..........................23");
+        jPanel50.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 680, -1, 20));
+
+        jLabel20.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(102, 51, 0));
+        jLabel20.setText(".....................18");
+        jPanel50.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 350, 150, 20));
+
+        jLabel21.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(102, 51, 0));
+        jLabel21.setText(".........................................26");
+        jPanel50.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 380, 270, 20));
+
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/decormenu1.png"))); // NOI18N
+        jPanel50.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 320, -1, -1));
+
+        getContentPane().add(jPanel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1130, 760));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -872,6 +201,11 @@ public class MenuPage extends javax.swing.JFrame {
         MainMenu menu = new MainMenu();
         menu.setVisible(true);
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        OrderPage order = new OrderPage();
+        order.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -909,33 +243,31 @@ public class MenuPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton8;
-    private javax.swing.JLabel jLabel134;
-    private javax.swing.JLabel jLabel135;
-    private javax.swing.JLabel jLabel136;
-    private javax.swing.JLabel jLabel137;
-    private javax.swing.JLabel jLabel138;
-    private javax.swing.JLabel jLabel139;
-    private javax.swing.JLabel jLabel140;
-    private javax.swing.JLabel jLabel141;
-    private javax.swing.JLabel jLabel142;
-    private javax.swing.JLabel jLabel143;
-    private javax.swing.JLabel jLabel144;
-    private javax.swing.JLabel jLabel145;
-    private javax.swing.JLabel jLabel146;
-    private javax.swing.JLabel jLabel147;
-    private javax.swing.JLabel jLabel148;
-    private javax.swing.JLabel jLabel149;
-    private javax.swing.JLabel jLabel150;
-    private javax.swing.JLabel jLabel151;
-    private javax.swing.JLabel jLabel152;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel50;
-    private javax.swing.JPanel jPanel51;
-    private javax.swing.JPanel jPanel52;
-    private javax.swing.JPanel jPanel53;
-    private javax.swing.JPanel jPanel54;
-    private javax.swing.JPanel jPanel55;
-    private javax.swing.JPanel jPanel56;
-    private java.awt.ScrollPane scrollPane1;
     // End of variables declaration//GEN-END:variables
 }
