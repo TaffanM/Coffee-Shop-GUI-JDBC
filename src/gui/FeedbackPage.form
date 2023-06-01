@@ -157,7 +157,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="90" y="500" width="-1" height="-1"/>
+              <AbsoluteConstraints x="90" y="490" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -180,7 +180,7 @@
         <Component class="javax.swing.JTextField" name="tf_hp">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="190" y="500" width="180" height="-1"/>
+              <AbsoluteConstraints x="190" y="490" width="180" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>

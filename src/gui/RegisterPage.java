@@ -8,8 +8,7 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-import cmd.ControllerAccount;
-import model.Account;
+import cmd.ControllerRegister;
 
 /**
  *
@@ -157,42 +156,32 @@ public class RegisterPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void finish_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finish_btnActionPerformed
-        RegisterPage reg = this;  // Use the existing instance of RegisterPage
-        ControllerAccount ctrl = new ControllerAccount();
+        String name = tf_nama.getText();
+        String username = tf_username.getText();
+        String password = tf_password.getText();
+        String confirmPassword = tf_confpassword.getText();
+
+        ControllerRegister ctrl = new ControllerRegister();
+        int result = ctrl.registerUser(name, username, password, confirmPassword);
         LoginCoffee login = new LoginCoffee();
-        
 
-        
-        String name = reg.tf_nama.getText();
-        String username = reg.tf_username.getText();
-        String password = reg.tf_password.getText();
-        String confirmPassword = reg.tf_confpassword.getText();
-
-        // Perform validation checks
-        if (name.isEmpty() || username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-            JOptionPane.showMessageDialog(reg, "Please fill in all the fields", "Error", JOptionPane.ERROR_MESSAGE);
-        } else if (!password.equals(confirmPassword)) {
-            JOptionPane.showMessageDialog(reg, "Passwords do not match", "Error", JOptionPane.ERROR_MESSAGE);
-        } else {
-            int choice = JOptionPane.showConfirmDialog(null, "Are you sure your data is correct?", "Confirmation", JOptionPane.YES_NO_OPTION);
-            if(choice == JOptionPane.YES_OPTION) {
-            
-                // Set 'tipe' attribute to "user"
-                String tipe = "user";
-
-                // Create Account object with the provided data
-                Account acc = new Account(name, username, password, tipe);
-
-                // Registration successful
-                int success = ctrl.saveAccount(acc);
-                if (success > 0) {
-                    JOptionPane.showMessageDialog(reg, "Registration successful", "Success", JOptionPane.INFORMATION_MESSAGE);
-                    this.dispose();
-                    login.setVisible(true);
-                } else {
-                    JOptionPane.showMessageDialog(reg, "Failed to register user", "Error", JOptionPane.ERROR_MESSAGE);
-                }
-            }   
+        switch (result) {
+            case -1:
+                JOptionPane.showMessageDialog(this, "Please fill in all the fields", "Error", JOptionPane.ERROR_MESSAGE);
+                break;
+            case -2:
+                JOptionPane.showMessageDialog(this, "Passwords do not match", "Error", JOptionPane.ERROR_MESSAGE);
+                break;
+            case -3:
+                break;
+            case 0:
+                JOptionPane.showMessageDialog(this, "Failed to register user", "Error", JOptionPane.ERROR_MESSAGE);
+                break;
+            default:
+                JOptionPane.showMessageDialog(this, "Registration successful", "Success", JOptionPane.INFORMATION_MESSAGE);
+                this.dispose();
+                login.setVisible(true);
+                break;
         }
 
         

@@ -14,7 +14,6 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import model.Account;
 /**
  *
  * @author user
@@ -53,10 +52,10 @@ public class ControllerLogin {
                     menu.setVisible(true);
                     JOptionPane.showMessageDialog(menu, "You are succesfully login, Welcome " + dbUsername, "Succeed!", JOptionPane.PLAIN_MESSAGE);
                 } else {
-                    JOptionPane.showMessageDialog(null, "Username or password is wrong", "Login failed", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(login, "Username or password is wrong", "Login failed", JOptionPane.ERROR_MESSAGE);
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "Username or password is wrong", "Login failed", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(login, "Username or password is wrong", "Login failed", JOptionPane.ERROR_MESSAGE);
             }
 
         } catch (SQLException e) {

@@ -18,9 +18,9 @@ import java.sql.*;
 public class ConnectionManager {
     private Connection conn;
     private String driver = "com.mysql.cj.jdbc.Driver";
-    private String url = "jdbc:mysql://localhost:3306/morning_dew_coffee_shop"; //nama database
+    private String url = "jdbc:mysql://localhost:3308/morning_dew_coffee_shop"; //nama database
     private String username = "root"; // user name DMBS
-    private String password = ""; // password DMBS
+    private String password = "ronaldo07"; // password DMBS
  
     public Connection logOn() {
         if (conn == null) {

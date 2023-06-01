@@ -11,17 +11,15 @@ package model;
 public class Menu {
     private int ID_menu;
     private String nama_menu;
-    private String additional;
     private int harga;
     private int stok;
 
     public Menu() {
     }
 
-    public Menu(int ID_menu, String nama_menu, String additional, int harga, int stok) {
+    public Menu(int ID_menu, String nama_menu, int harga, int stok) {
         this.ID_menu = ID_menu;
         this.nama_menu = nama_menu;
-        this.additional = additional;
         this.harga = harga;
         this.stok = stok;
     }
@@ -40,14 +38,6 @@ public class Menu {
 
     public void setNama_menu(String nama_menu) {
         this.nama_menu = nama_menu;
-    }
-
-    public String getAdditional() {
-        return additional;
-    }
-
-    public void setAdditional(String additional) {
-        this.additional = additional;
     }
 
     public int getHarga() {

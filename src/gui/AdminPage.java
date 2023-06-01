@@ -5,6 +5,7 @@
 package gui;
 import cmd.ControllerAccount;
 import cmd.ControllerFeedback;
+import cmd.ControllerMenu;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
@@ -14,6 +15,7 @@ import javax.swing.JOptionPane;
 import javax.swing.Timer;
 import model.Account;
 import model.Feedback;
+import model.Menu;
 /**
  *
  * @author user
@@ -26,6 +28,9 @@ public class AdminPage extends javax.swing.JFrame {
     public AdminPage() {
         initComponents();
         times();
+        displayAcc();
+        displayFeed();
+        displayMenu();
     }
     
     Timer t;
@@ -83,6 +88,25 @@ public class AdminPage extends javax.swing.JFrame {
         accountTable2.setModel(new javax.swing.table.DefaultTableModel(
                 dtFeed,
                 new String[]{"ID feedback", "Name", "Feedback", "Address", "Handphone"}
+        ));
+    }
+   
+    
+    private void displayMenu() {
+        ControllerMenu cmdMenu = new ControllerMenu();
+        List<Menu> lsMenu = cmdMenu.getAllMenu();
+        String[][] dtMenu = new  String[lsMenu.size()][4];
+        int i = 0;
+        for (Menu menu : lsMenu) {
+            dtMenu[i][0] = "" + menu.getID_menu();
+            dtMenu[i][1] = menu.getNama_menu();
+            dtMenu[i][2] = String.valueOf(menu.getHarga());
+            dtMenu[i][3] = String.valueOf(menu.getStok());
+            i++;
+        }
+        accountTable1.setModel(new javax.swing.table.DefaultTableModel(
+                dtMenu,
+                new String[]{"ID menu", "Nama Menu", "Harga", "Stok"}
         ));
     }
 
@@ -192,13 +216,13 @@ public class AdminPage extends javax.swing.JFrame {
         accountTable1.setForeground(new java.awt.Color(204, 153, 0));
         accountTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "ID Menu", "Nama Menu", "Additional", "Harga", "Stok"
+                "ID Menu", "Nama Menu", "Harga", "Stok"
             }
         ));
         jScrollPane2.setViewportView(accountTable1);
@@ -329,11 +353,12 @@ public class AdminPage extends javax.swing.JFrame {
 
         lbl_clock.setBackground(new java.awt.Color(255, 255, 255));
         lbl_clock.setFont(new java.awt.Font("Futura Bk BT", 0, 24)); // NOI18N
-        lbl_clock.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_clock.setForeground(new java.awt.Color(153, 102, 0));
         lbl_clock.setText("0");
-        jPanel2.add(lbl_clock, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 170, 60));
+        jPanel2.add(lbl_clock, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 170, 60));
 
         jLabel4.setFont(new java.awt.Font("Futura", 0, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Admin Page");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
 

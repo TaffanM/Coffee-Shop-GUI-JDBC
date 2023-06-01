@@ -97,13 +97,13 @@ public class FeedbackPage extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Futura", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Handphone");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 500, -1, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Futura", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Name");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 390, -1, -1));
-        jPanel2.add(tf_hp, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 500, 180, -1));
+        jPanel2.add(tf_hp, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 490, 180, -1));
         jPanel2.add(tf_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, 180, -1));
 
         jButton1.setBackground(new java.awt.Color(255, 153, 51));
