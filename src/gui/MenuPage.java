@@ -112,7 +112,7 @@ public class MenuPage extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(102, 51, 0));
-        jLabel9.setText(".................................................12");
+        jLabel9.setText("....................................................12");
         jPanel50.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 410, 320, 20));
 
         jLabel10.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
@@ -122,7 +122,7 @@ public class MenuPage extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(102, 51, 0));
-        jLabel11.setText("Pudding (*Flavor in menu)");
+        jLabel11.setText("Pudding (*Flavor in order)");
         jPanel50.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 350, 220, 20));
 
         jLabel12.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
@@ -180,12 +180,12 @@ public class MenuPage extends javax.swing.JFrame {
 
         jLabel20.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(102, 51, 0));
-        jLabel20.setText(".....................18");
-        jPanel50.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 350, 150, 20));
+        jLabel20.setText("....................18");
+        jPanel50.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 350, 160, 20));
 
         jLabel21.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(102, 51, 0));
-        jLabel21.setText(".........................................26");
+        jLabel21.setText("......................................... 26");
         jPanel50.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 380, 270, 20));
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/decormenu1.png"))); // NOI18N

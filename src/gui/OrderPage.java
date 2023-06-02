@@ -4,7 +4,8 @@
  */
 package gui;
 import cmd.ControllerOrder;
-import javax.swing.JOptionPane;
+import javax.swing.Timer;
+import model.Account;
 /**
  *
  * @author mac
@@ -120,7 +121,10 @@ public class OrderPage extends javax.swing.JFrame {
 
     private void cart_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cart_btnActionPerformed
         ControllerOrder order = new ControllerOrder();
-        order.Order(cb_patiserie, qty_patiserie, cb_drink, qty_drink);
+        
+        Account loggedInAccount = Account.getLoggedInAccount();
+        order.Order(loggedInAccount, cb_patiserie, qty_patiserie, cb_drink, qty_drink);
+        
     }//GEN-LAST:event_cart_btnActionPerformed
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked

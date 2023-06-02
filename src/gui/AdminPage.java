@@ -59,7 +59,7 @@ public class AdminPage extends javax.swing.JFrame {
     private void displayAcc() {
         ControllerAccount cmdAcc = new ControllerAccount();
         List<Account> lsAcc = cmdAcc.getAllAccount();
-        String[][] dtAcc = new String[lsAcc.size()][5]; // Updated size to [lsAcc.size()][5]
+        String[][] dtAcc = new String[lsAcc.size()][5]; 
         int i = 0;
         for (Account acc : lsAcc) {
             dtAcc[i][0] = "" + acc.getID_pelanggan();
@@ -78,7 +78,7 @@ public class AdminPage extends javax.swing.JFrame {
     private void displayFeed() {
         ControllerFeedback cmdFeed = new ControllerFeedback();
         List<Feedback> lsFeed = cmdFeed.getAllFeedback();
-        String[][] dtFeed = new String[lsFeed.size()][5]; // Updated size to [lsAcc.size()][5]
+        String[][] dtFeed = new String[lsFeed.size()][5]; 
         int i = 0;
         for (Feedback feed : lsFeed) {
             dtFeed[i][0] = "" + feed.getID_feedback();
@@ -125,7 +125,7 @@ public class AdminPage extends javax.swing.JFrame {
         dtOrders[i][3] = String.valueOf(order.getTotal());
         i++;
     }
-    accountTable1.setModel(new javax.swing.table.DefaultTableModel(
+    accountTable3.setModel(new javax.swing.table.DefaultTableModel(
         dtOrders,
         new String[]{"ID Order", "ID Account", "Order Detail", "Total Price"}
     ));
@@ -184,6 +184,7 @@ public class AdminPage extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        accountTable.setBackground(new java.awt.Color(255, 255, 255));
         accountTable.setForeground(new java.awt.Color(204, 153, 0));
         accountTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -233,6 +234,7 @@ public class AdminPage extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        accountTable1.setBackground(new java.awt.Color(255, 255, 255));
         accountTable1.setForeground(new java.awt.Color(204, 153, 0));
         accountTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -282,6 +284,9 @@ public class AdminPage extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jScrollPane3.setBackground(new java.awt.Color(255, 255, 255));
+
+        accountTable2.setBackground(new java.awt.Color(255, 255, 255));
         accountTable2.setForeground(new java.awt.Color(204, 153, 0));
         accountTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -300,7 +305,7 @@ public class AdminPage extends javax.swing.JFrame {
             accountTable2.getColumnModel().getColumn(4).setHeaderValue("Handphone");
         }
 
-        jPanel6.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 604, 472));
+        jPanel6.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 610, 472));
 
         create_btnFeed.setText("Create");
         create_btnFeed.addActionListener(new java.awt.event.ActionListener() {
@@ -335,6 +340,7 @@ public class AdminPage extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        accountTable3.setBackground(new java.awt.Color(255, 255, 255));
         accountTable3.setForeground(new java.awt.Color(204, 153, 0));
         accountTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -349,7 +355,7 @@ public class AdminPage extends javax.swing.JFrame {
         ));
         jScrollPane4.setViewportView(accountTable3);
 
-        jPanel7.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 604, 472));
+        jPanel7.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 820, 472));
 
         create_btnOrder.setText("Create");
         create_btnOrder.addActionListener(new java.awt.event.ActionListener() {
@@ -365,7 +371,7 @@ public class AdminPage extends javax.swing.JFrame {
                 update_btnOrderActionPerformed(evt);
             }
         });
-        jPanel7.add(update_btnOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 670, 103, 35));
+        jPanel7.add(update_btnOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 670, 103, 35));
 
         delete_btnOrder.setText("Delete");
         delete_btnOrder.addActionListener(new java.awt.event.ActionListener() {
@@ -373,15 +379,15 @@ public class AdminPage extends javax.swing.JFrame {
                 delete_btnOrderActionPerformed(evt);
             }
         });
-        jPanel7.add(delete_btnOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 670, 103, 35));
+        jPanel7.add(delete_btnOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 670, 103, 35));
 
         jLabel5.setFont(new java.awt.Font("Poppins", 0, 18)); // NOI18N
         jLabel5.setText("CRUD Order's Table");
-        jPanel7.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 220, 40));
+        jPanel7.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, 220, 40));
 
         adminTabbed.addTab("Order", jPanel7);
 
-        jPanel2.setBackground(new java.awt.Color(255, 204, 102));
+        jPanel2.setBackground(new java.awt.Color(255, 204, 153));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         logoff_btn.setText("Logoff");
@@ -414,7 +420,7 @@ public class AdminPage extends javax.swing.JFrame {
         lbl_clock.setText("0");
         jPanel2.add(lbl_clock, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 170, 60));
 
-        jLabel4.setFont(new java.awt.Font("Futura", 0, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Futura", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Admin Page");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
@@ -465,14 +471,14 @@ public class AdminPage extends javax.swing.JFrame {
         int choice = JOptionPane.showConfirmDialog(null, "Are you sure want to logout?", "Confirmation", JOptionPane.YES_NO_OPTION);
 
         if (choice == JOptionPane.YES_OPTION) {
-            // User confirmed, navigate back to the login page
+            
 
 
             LoginCoffee login = new LoginCoffee();
             login.setVisible(true);
 
 
-            // Close or hide the current form if needed
+            // tutup form
             this.dispose();
 
             JOptionPane.showMessageDialog(rootPane, "You are succesfully logout!");
@@ -488,7 +494,7 @@ public class AdminPage extends javax.swing.JFrame {
         String ID_pelanggan;
         ID_pelanggan = JOptionPane.showInputDialog("Masukkan ID pelanggan yang akan dihapus : ");
 
-        // Convert ID_pelanggan to int
+        // Konversi ID_pelanggan ke int
         int ID_pelangganInt = Integer.parseInt(ID_pelanggan);
 
         ControllerAccount cmdAcc = new ControllerAccount();
@@ -509,10 +515,10 @@ public class AdminPage extends javax.swing.JFrame {
         int result = cmdAcc.updateAccount(account);
 
         if (result > 0) {
-            // Account updated successfully
+            // Account berhasil diupdate
             displayAcc();
         } else {
-            // Error occurred while updating account
+            // Error ketika updating account
             JOptionPane.showMessageDialog(null, "Terjadi kesalahan. Mohon ulang kembali", "Error", JOptionPane.ERROR_MESSAGE);
         }
         
@@ -531,7 +537,7 @@ public class AdminPage extends javax.swing.JFrame {
         tipe = (String) JOptionPane.showInputDialog(null, "Pilih tipe akun:", "Dropdown", JOptionPane.QUESTION_MESSAGE, null, choices, choices[0]);
 
         if (nama != null && username != null && password != null && tipe != null) {
-            // All input fields are filled
+            
             Account account = new Account();
             account.setNama(nama);
             account.setUsername(username);
@@ -542,10 +548,10 @@ public class AdminPage extends javax.swing.JFrame {
             int result = cmdAcc.saveAccount(account);
 
             if (result > 0) {
-                // Account saved successfully
+                // Account berhasil tersimpan
                 displayAcc();
             } else {
-                // Error occurred while saving account
+                // Error ketika save account
                 JOptionPane.showMessageDialog(null, "Terjadi kesalahan. Mohon ulang kembali", "Error", JOptionPane.ERROR_MESSAGE);
             }
         } else {
@@ -590,10 +596,10 @@ public class AdminPage extends javax.swing.JFrame {
             int result = cmdMenu.saveMenu(menu);
 
             if (result > 0) {
-                // Account saved successfully
+                // Account berhasil tersimpan
                 displayMenu();
             } else {
-                // Error occurred while saving account
+                // Error 
                 JOptionPane.showMessageDialog(null, "Terjadi kesalahan. Mohon ulang kembali", "Error", JOptionPane.ERROR_MESSAGE);
             }
         } else {
@@ -608,10 +614,10 @@ public class AdminPage extends javax.swing.JFrame {
         int result = cmdMenu.updateMenu(menu);
 
         if (result > 0) {
-            // Feedback updated successfully
+            // Feedback berhasil diupdate
             displayMenu();
         } else {
-            // Error occurred while updating feedback
+            // Error
             JOptionPane.showMessageDialog(null, "Terjadi kesalahan. Mohon ulang kembali", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_update_orderActionPerformed
@@ -620,7 +626,7 @@ public class AdminPage extends javax.swing.JFrame {
         String ID_menu;
         ID_menu = JOptionPane.showInputDialog("Masukkan ID menu yang akan dihapus : ");
 
-        // Convert ID_feedback to int
+        // Konversi ID_feedback ke int
         int ID_menuInt = Integer.parseInt(ID_menu);
 
         ControllerMenu cmdMenu = new ControllerMenu();
@@ -651,7 +657,7 @@ public class AdminPage extends javax.swing.JFrame {
             feed.setFeedback(feedback);
             feed.setAddress(address);
             feed.setHandphone(handphone);
-            // All input fields are filled
+            
             
             
 
@@ -659,10 +665,10 @@ public class AdminPage extends javax.swing.JFrame {
             int result = cmdFeed.saveFeedback(feed);
 
             if (result > 0) {
-                // Account saved successfully
+                // Feedback berhasil disimpan
                 displayFeed();
             } else {
-                // Error occurred while saving account
+                // Error 
                 JOptionPane.showMessageDialog(null, "Terjadi kesalahan. Mohon ulang kembali", "Error", JOptionPane.ERROR_MESSAGE);
             }
         } else {
@@ -679,10 +685,10 @@ public class AdminPage extends javax.swing.JFrame {
         int result = cmdFeedback.updateFeedback(feedback);
 
         if (result > 0) {
-            // Feedback updated successfully
+            // Feedback nerhasil diupdate
             displayFeed();
         } else {
-            // Error occurred while updating feedback
+            // Error 
             JOptionPane.showMessageDialog(null, "Terjadi kesalahan. Mohon ulang kembali", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_update_btnFeedActionPerformed
@@ -698,6 +704,7 @@ public class AdminPage extends javax.swing.JFrame {
         int result = cmdFeedback.deleteFeedback(ID_feedbackInt);
 
         if (result > 0) {
+            // Feedback berhasil dihapus
            displayFeed();
         } else {
            JOptionPane.showMessageDialog(null, "Terjadi kesalahan. Mohon ulang kembali", "Error", JOptionPane.ERROR_MESSAGE);
@@ -753,12 +760,11 @@ public class AdminPage extends javax.swing.JFrame {
         int result = controllerOrder.updateOrder(order);
 
         if (result > 0) {
-            // Order updated successfully
+            // Order berhasil diupdate
             JOptionPane.showMessageDialog(null, "Order updated successfully!");
-            // Refresh the order list
             displayOrders();
         } else {
-            // Error occurred while updating order
+            // Error 
             JOptionPane.showMessageDialog(null, "Failed to update order!", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
@@ -768,19 +774,18 @@ public class AdminPage extends javax.swing.JFrame {
         String ID_order;
         ID_order = JOptionPane.showInputDialog("Enter the order ID to delete: ");
 
-        // Convert ID_order to int
+        // Konversi ID_order ke int
         int ID_orderInt = Integer.parseInt(ID_order);
 
         ControllerOrder controllerOrder = new ControllerOrder();
         int result = controllerOrder.deleteOrder(ID_orderInt);
 
         if (result > 0) {
-            // Order deleted successfully
+            // Order berhasil dihapus
             JOptionPane.showMessageDialog(null, "Order deleted successfully!");
-            // Refresh the order list
             displayOrders();
         } else {
-            // Error occurred while deleting order
+            // Error
             JOptionPane.showMessageDialog(null, "Failed to delete order!", "Error", JOptionPane.ERROR_MESSAGE);
         }
 

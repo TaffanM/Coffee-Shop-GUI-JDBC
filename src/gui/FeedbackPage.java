@@ -159,7 +159,7 @@ public class FeedbackPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        FeedbackPage fed = this; // Use the existing instance of RegisterPage
+        FeedbackPage fed = this;
         ControllerFeedback ctrl = new ControllerFeedback();
 
         Feedback feed = new Feedback();
@@ -167,10 +167,10 @@ public class FeedbackPage extends javax.swing.JFrame {
 
         String name = fed.tf_name.getText();
         String feedback = fed.ta_feedback.getText();
-        String address = fed.tf_address1.getText(); // Fix: Correct variable name
+        String address = fed.tf_address1.getText(); 
         String handphone = fed.tf_hp.getText();
 
-        // Perform validation checks
+        // Cek textfield
         if (feedback.isEmpty() || address.isEmpty() || handphone.isEmpty() || name.isEmpty()) {
             JOptionPane.showMessageDialog(fed, "Please fill in all the fields", "Error", JOptionPane.ERROR_MESSAGE);
         } else {
@@ -181,7 +181,7 @@ public class FeedbackPage extends javax.swing.JFrame {
                 feed.setAddress(address);
                 feed.setHandphone(handphone);
 
-                // Registration successful
+                // Registrasi berhasil 
                 int success = ctrl.saveFeedback(feed);
                 if (success > 0) {
                     JOptionPane.showMessageDialog(fed, "Thank you for your feedback!", "Success", JOptionPane.INFORMATION_MESSAGE);

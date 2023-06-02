@@ -12,65 +12,138 @@ import javax.swing.JOptionPane;
 import db.ConnectionManager;
 import java.util.ArrayList;
 import java.util.List;
-import model.Menu;
+import javax.swing.Timer;
 import model.Account;
 import model.OrderAcc;
+import gui.ConfirmationPage;
+import gui.OrderPage;
 
 public class ControllerOrder {
-    public void Order(JComboBox<String> cb_patiserie, JComboBox<String> qty_patiserie, JComboBox<String> cb_drink, JComboBox<String> qty_drink) {
-        Menu menu = new Menu();
-        Account acc = new Account();
+    public void Order(Account loggedInAccount, JComboBox<String> cb_patiserie, JComboBox<String> qty_patiserie, JComboBox<String> cb_drink, JComboBox<String> qty_drink) {
+        
         ConnectionManager conMan = new ConnectionManager();
         Connection conn = conMan.logOn();
+        ConfirmationPage conf = new ConfirmationPage();
+        OrderPage order = new OrderPage();
+        
+        
+        int ID_pelanggan = loggedInAccount.getID_pelanggan();
+        
+        String pilihPatisserie = cb_patiserie.getSelectedItem().toString();
+        String pilihDrink = cb_drink.getSelectedItem().toString();
+        
+        if (pilihPatisserie.equals("None") && pilihDrink.equals("None")) {
+            JOptionPane.showMessageDialog(null, "Please order minimal one of our menu");
+            return;
+        } else {
+            
+            int choice = JOptionPane.showConfirmDialog(null, "Are you sure your data is correct?", "Confirmation", JOptionPane.YES_NO_OPTION);
+            if (choice == JOptionPane.YES_OPTION) {
 
-        int choice = JOptionPane.showConfirmDialog(null, "Are you sure your data is correct?", "Confirmation", JOptionPane.YES_NO_OPTION);
-        if (choice == JOptionPane.YES_OPTION) {
-            // Mendapatkan jenis makanan dan kuantitas
-            String selectedPatisserie = cb_patiserie.getSelectedItem().toString();
-            int patisserieQty = Integer.parseInt(qty_patiserie.getSelectedItem().toString());
+                // Mendapatkan jenis makanan dan kuantitas
+                String selectedPatisserie = cb_patiserie.getSelectedItem().toString();
+                int patisserieQty = Integer.parseInt(qty_patiserie.getSelectedItem().toString());
+                int patisseriePrice = patisseriePriceDatabase(selectedPatisserie, conn);
+                
+                // Mendapatkan jenis minuman dan kuantitas
+                String selectedDrink = cb_drink.getSelectedItem().toString();
+                int drinkQty = Integer.parseInt(qty_drink.getSelectedItem().toString());
+                int drinkPrice = drinkPriceDatabase(selectedDrink, conn);
+                
 
-            // Mendapatkan jenis minuman dan kuantitas
-            String selectedDrink = cb_drink.getSelectedItem().toString();
-            int drinkQty = Integer.parseInt(qty_drink.getSelectedItem().toString());
+                int patisserieTotalPrice = patisserieQty * patisseriePrice;
+                int drinkTotalPrice = drinkQty * drinkPrice;
+                int totalPrice = patisserieTotalPrice + drinkTotalPrice;
 
-            int itemPrice = menu.getHarga();
-            int itemStock = menu.getStok();
 
-            int patisserieTotalPrice = patisserieQty * itemPrice;
-            int drinkTotalPrice = drinkQty * itemPrice;
-            int totalPrice = patisserieTotalPrice + drinkTotalPrice;
 
-            String query = "INSERT INTO order_acc (ID_account, order_detail, total_price) VALUES (?, ?, ?)";
+                String query = "INSERT INTO order_acc (ID_pelanggan, order_detail, total) VALUES (?, ?, ?)";
 
-            try {
-                PreparedStatement ps = conn.prepareStatement(query);
-                ps.setInt(1, acc.getID_pelanggan());
-                ps.setString(2, selectedPatisserie + " - Quantity: " + patisserieQty + ", " + selectedDrink + " - Quantity: " + drinkQty);
-                ps.setInt(3, totalPrice);
-
-                int rowsAffected = ps.executeUpdate();
-                if (rowsAffected > 0) {
-                    JOptionPane.showMessageDialog(null, "Order added successfully!");
-                } else {
-                    JOptionPane.showMessageDialog(null, "Failed to add order!");
-                }
-
-                // Commit the transaction
-                conn.commit();
-            } catch (SQLException ex) {
-                Logger.getLogger(ControllerOrder.class.getName()).log(Level.SEVERE, null, ex);
-            } finally {
-                // Close the connection
                 try {
-                    if (conn != null) {
-                        conn.close();
+                    // Cek akun sebelum order
+                    String accountQuery = "SELECT ID_pelanggan FROM account WHERE ID_pelanggan = ?";
+                    PreparedStatement accountPs = conn.prepareStatement(accountQuery);
+                    accountPs.setInt(1, ID_pelanggan);
+                    ResultSet accountRs = accountPs.executeQuery();
+                    if (!accountRs.next()) {
+                        JOptionPane.showMessageDialog(null, "Account does not exist!");
+                        System.out.println(ID_pelanggan);
+                        return;
                     }
+
+                    PreparedStatement ps = conn.prepareStatement(query);
+                    ps.setInt(1, ID_pelanggan);
+                    ps.setString(2, selectedPatisserie + " - Quantity: " + patisserieQty + ", " + selectedDrink + " - Quantity: " + drinkQty);
+                    ps.setInt(3, totalPrice);
+
+                    int rowsAffected = ps.executeUpdate();
+                    if (rowsAffected > 0) {
+                        conf.setLocationRelativeTo(order);
+                        conf.setVisible(true);
+                        Timer timer = new Timer(5000, e -> conf.dispose());
+                        timer.setRepeats(false);
+                        timer.start();
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Failed to add order!");
+                    }
+
+                    // Commit transaksi
+                    conn.commit();
                 } catch (SQLException ex) {
                     Logger.getLogger(ControllerOrder.class.getName()).log(Level.SEVERE, null, ex);
+                } finally {
+                    // tutup koneksi
+                    try {
+                        if (conn != null) {
+                            conn.close();
+                        }
+                    } catch (SQLException ex) {
+                        Logger.getLogger(ControllerOrder.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
             }
         }
     }
+    
+    
+    private int patisseriePriceDatabase(String selectedPatisserie, Connection conn) {
+        int patisseriePrice = 0;
+        try {
+            String query = "SELECT harga FROM menu WHERE nama_menu = ?";
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setString(1, selectedPatisserie);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                patisseriePrice = rs.getInt("harga");
+            }
+            rs.close();
+            ps.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return patisseriePrice;
+    }
+
+    private int drinkPriceDatabase(String selectedDrink, Connection conn) {
+        int drinkPrice = 0;
+        try {
+            String query = "SELECT harga FROM menu WHERE nama_menu = ?";
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setString(1, selectedDrink);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                drinkPrice = rs.getInt("harga");
+            }
+            rs.close();
+            ps.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return drinkPrice;
+    }
+    
+    
+    
     
     
     public List<OrderAcc> getAllOrders() {
@@ -83,10 +156,10 @@ public class ControllerOrder {
             ResultSet rs = stm.executeQuery(query);
             while (rs.next()) {
                 int ID_order = rs.getInt("ID_order");
-                int ID_account = rs.getInt("ID_account");
+                int ID_pelanggan = rs.getInt("ID_pelanggan");
                 String orderDetail = rs.getString("order_detail");
-                int totalPrice = rs.getInt("total_price");
-                OrderAcc order = new OrderAcc(ID_order, ID_account, orderDetail, totalPrice);
+                int totalPrice = rs.getInt("total");
+                OrderAcc order = new OrderAcc(ID_order, ID_pelanggan, orderDetail, totalPrice);
                 orderList.add(order);
             }
         } catch (SQLException ex) {
@@ -99,7 +172,7 @@ public class ControllerOrder {
 
     public int saveOrder(OrderAcc order) {
         int result = 0;
-        String query = "INSERT INTO order_acc(ID_account, order_detail, total_price) VALUES (?, ?, ?)";
+        String query = "INSERT INTO order_acc(ID_pelanggan, order_detail, total) VALUES (?, ?, ?)";
 
         ConnectionManager conMan = new ConnectionManager();
         Connection conn = conMan.logOn();
@@ -139,7 +212,7 @@ public class ControllerOrder {
 
     public int updateOrder(OrderAcc order) {
         int result = 0;
-        String query = "UPDATE order_acc SET ID_account = ?, order_detail = ?, total_price = ? WHERE ID_order = ?";
+        String query = "UPDATE order_acc SET ID_pelanggan = ?, order_detail = ?, total = ? WHERE ID_order = ?";
 
         ConnectionManager conMan = new ConnectionManager();
         Connection conn = conMan.logOn();

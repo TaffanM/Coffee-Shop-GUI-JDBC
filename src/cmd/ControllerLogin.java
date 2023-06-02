@@ -14,12 +14,13 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import model.Account;
 /**
  *
  * @author user
  */
 public class ControllerLogin {
-    
+
     public void autentikasi(String username, String password, LoginCoffee login) {
         Connection connection = null;
         PreparedStatement statement = null;
@@ -35,6 +36,7 @@ public class ControllerLogin {
             rs = statement.executeQuery();
 
             if (rs.next()) {
+                int ID_pelanggan = rs.getInt("ID_pelanggan");
                 String dbUsername = rs.getString("username");
                 String dbPassword = rs.getString("password");
                 String dbTipe = rs.getString("tipe");
@@ -43,14 +45,18 @@ public class ControllerLogin {
                     login.dispose();
                     // Membuat objek dari page baru
                     AdminPage admin = new AdminPage();
-                    // atur visibilitas dari page baru
+                    // Atur visibilitas dari page baru
                     admin.setVisible(true);
-                    JOptionPane.showMessageDialog(admin, "You are succesfully login, Welcome " + dbUsername, "Succeed!", JOptionPane.PLAIN_MESSAGE);
+                    JOptionPane.showMessageDialog(admin, "You are successfully logged in, Welcome " + dbUsername, "Succeed!", JOptionPane.PLAIN_MESSAGE);
+                    // Set the logged-in account
+                    Account.setLoggedInAccount(new Account(ID_pelanggan, dbUsername, dbPassword, dbTipe));
                 } else if (dbTipe.equals("user") && dbUsername.equals(username) && dbPassword.equals(password)) {
                     login.dispose();
                     MainMenu menu = new MainMenu();
                     menu.setVisible(true);
-                    JOptionPane.showMessageDialog(menu, "You are succesfully login, Welcome " + dbUsername, "Succeed!", JOptionPane.PLAIN_MESSAGE);
+                    JOptionPane.showMessageDialog(menu, "You are successfully logged in, Welcome " + dbUsername, "Succeed!", JOptionPane.PLAIN_MESSAGE);
+                    // Set the logged-in account
+                    Account.setLoggedInAccount(new Account(ID_pelanggan, dbUsername, dbPassword, dbTipe));
                 } else {
                     JOptionPane.showMessageDialog(login, "Username or password is wrong", "Login failed", JOptionPane.ERROR_MESSAGE);
                 }
@@ -77,6 +83,5 @@ public class ControllerLogin {
             }
         }
     }
-
-
 }
+
