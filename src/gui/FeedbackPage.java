@@ -78,12 +78,12 @@ public class FeedbackPage extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Please fill the blanks below to send us a feedback! ");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Futura Bk BT", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("<html><body style='width:400px; align-text: center;'>\nAt Morning Dew Café, we value your experience and strive to provide the best possible service to our cherished customers. Your feedback is invaluable to us as it helps us improve and ensure that every visit to our café is a delightful one. We invite you to share your thoughts, suggestions, and experiences with us through our dedicated feedback page.\n</body></html> ");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, -1, -1));
 
@@ -115,7 +115,7 @@ public class FeedbackPage extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 630, 150, 40));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 630, 170, 40));
 
         jButton2.setBackground(new java.awt.Color(255, 153, 51));
         jButton2.setFont(new java.awt.Font("Futura Bk BT", 0, 12)); // NOI18N

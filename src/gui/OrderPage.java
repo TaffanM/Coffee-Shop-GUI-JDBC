@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package gui;
-
+import cmd.ControllerOrder;
+import javax.swing.JOptionPane;
 /**
  *
  * @author mac
@@ -26,21 +27,105 @@ public class OrderPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        cb_patiserie = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        qty_patiserie = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
+        cb_drink = new javax.swing.JComboBox<>();
+        jLabel5 = new javax.swing.JLabel();
+        qty_drink = new javax.swing.JComboBox<>();
+        cart_btn = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(255, 204, 153));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectcoffeeshop/img/Order.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, -1, 158));
+
+        cb_patiserie.setFont(new java.awt.Font("Futura", 0, 13)); // NOI18N
+        cb_patiserie.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "Dew Kuasong", "Chocolate Pudding", "Vanilla Pudding", "Strawberry Pudding", "Cheesecake", "Bread", " " }));
+        jPanel1.add(cb_patiserie, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, 190, -1));
+
+        jLabel2.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Patiserie");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Qty");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 230, -1, -1));
+
+        qty_patiserie.setFont(new java.awt.Font("Futura", 0, 13)); // NOI18N
+        qty_patiserie.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        jPanel1.add(qty_patiserie, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, 190, -1));
+
+        jLabel4.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Drinks");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, -1, -1));
+
+        cb_drink.setFont(new java.awt.Font("Futura", 0, 13)); // NOI18N
+        cb_drink.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "Americano", "Cappucino", "Cafe Latte", "Mocha", "Aren Latte" }));
+        jPanel1.add(cb_drink, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 190, -1));
+
+        jLabel5.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("Qty");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, -1, -1));
+
+        qty_drink.setFont(new java.awt.Font("Futura", 0, 13)); // NOI18N
+        qty_drink.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        jPanel1.add(qty_drink, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 190, 190, -1));
+
+        cart_btn.setBackground(new java.awt.Color(255, 153, 51));
+        cart_btn.setForeground(new java.awt.Color(255, 255, 255));
+        cart_btn.setText("Add to Cart");
+        cart_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cart_btnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cart_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, 140, 60));
+
+        jLabel6.setFont(new java.awt.Font("Futura", 1, 36)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("X");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 809, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 305, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cart_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cart_btnActionPerformed
+        ControllerOrder order = new ControllerOrder();
+        order.Order(cb_patiserie, qty_patiserie, cb_drink, qty_drink);
+    }//GEN-LAST:event_cart_btnActionPerformed
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        this.dispose();
+    }//GEN-LAST:event_jLabel6MouseClicked
 
     /**
      * @param args the command line arguments
@@ -78,5 +163,17 @@ public class OrderPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cart_btn;
+    private javax.swing.JComboBox<String> cb_drink;
+    private javax.swing.JComboBox<String> cb_patiserie;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JComboBox<String> qty_drink;
+    private javax.swing.JComboBox<String> qty_patiserie;
     // End of variables declaration//GEN-END:variables
 }

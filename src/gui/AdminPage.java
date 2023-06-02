@@ -6,6 +6,7 @@ package gui;
 import cmd.ControllerAccount;
 import cmd.ControllerFeedback;
 import cmd.ControllerMenu;
+import cmd.ControllerOrder;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
@@ -16,6 +17,7 @@ import javax.swing.Timer;
 import model.Account;
 import model.Feedback;
 import model.Menu;
+import model.OrderAcc;
 /**
  *
  * @author user
@@ -31,6 +33,7 @@ public class AdminPage extends javax.swing.JFrame {
         displayAcc();
         displayFeed();
         displayMenu();
+        displayOrders();
     }
     
     Timer t;
@@ -109,6 +112,25 @@ public class AdminPage extends javax.swing.JFrame {
                 new String[]{"ID menu", "Nama Menu", "Harga", "Stok"}
         ));
     }
+    
+    private void displayOrders() {
+    ControllerOrder controllerOrder = new ControllerOrder();
+    List<OrderAcc> lsOrders = controllerOrder.getAllOrders();
+    String[][] dtOrders = new String[lsOrders.size()][4];
+    int i = 0;
+    for (OrderAcc order : lsOrders) {
+        dtOrders[i][0] = "" + order.getID_order();
+        dtOrders[i][1] = "" + order.getID_pelanggan();
+        dtOrders[i][2] = order.getOrder_detail();
+        dtOrders[i][3] = String.valueOf(order.getTotal());
+        i++;
+    }
+    accountTable1.setModel(new javax.swing.table.DefaultTableModel(
+        dtOrders,
+        new String[]{"ID Order", "ID Account", "Order Detail", "Total Price"}
+    ));
+}
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -123,7 +145,6 @@ public class AdminPage extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         accountTable = new javax.swing.JTable();
-        display_btn = new javax.swing.JButton();
         create_btn = new javax.swing.JButton();
         update_btn = new javax.swing.JButton();
         delete_btn = new javax.swing.JButton();
@@ -131,25 +152,32 @@ public class AdminPage extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         accountTable1 = new javax.swing.JTable();
-        display_btn1 = new javax.swing.JButton();
-        create_btn1 = new javax.swing.JButton();
-        update_btn1 = new javax.swing.JButton();
-        delete_btn1 = new javax.swing.JButton();
+        create_order = new javax.swing.JButton();
+        update_order = new javax.swing.JButton();
+        delete_order = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         accountTable2 = new javax.swing.JTable();
-        display_btnFeed = new javax.swing.JButton();
         create_btnFeed = new javax.swing.JButton();
         update_btnFeed = new javax.swing.JButton();
         delete_btnFeed = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        accountTable3 = new javax.swing.JTable();
+        create_btnOrder = new javax.swing.JButton();
+        update_btnOrder = new javax.swing.JButton();
+        delete_btnOrder = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         logoff_btn = new javax.swing.JButton();
         menu_btn = new javax.swing.JButton();
         receipt_btn = new javax.swing.JButton();
         lbl_clock = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        account_btn = new javax.swing.JButton();
+        Order_btn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -172,14 +200,6 @@ public class AdminPage extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 604, 472));
 
-        display_btn.setText("Display");
-        display_btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                display_btnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(display_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 670, 103, 35));
-
         create_btn.setText("Create");
         create_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,7 +214,7 @@ public class AdminPage extends javax.swing.JFrame {
                 update_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(update_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 670, 103, 35));
+        jPanel1.add(update_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 670, 103, 35));
 
         delete_btn.setText("Delete");
         delete_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -202,7 +222,7 @@ public class AdminPage extends javax.swing.JFrame {
                 delete_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(delete_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 670, 103, 35));
+        jPanel1.add(delete_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 670, 103, 35));
 
         jLabel1.setFont(new java.awt.Font("Poppins", 0, 18)); // NOI18N
         jLabel1.setText("CRUD Account's Table");
@@ -229,40 +249,32 @@ public class AdminPage extends javax.swing.JFrame {
 
         jPanel5.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 604, 472));
 
-        display_btn1.setText("Display");
-        display_btn1.addActionListener(new java.awt.event.ActionListener() {
+        create_order.setText("Create");
+        create_order.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                display_btn1ActionPerformed(evt);
+                create_orderActionPerformed(evt);
             }
         });
-        jPanel5.add(display_btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 670, 103, 35));
+        jPanel5.add(create_order, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 670, 103, 35));
 
-        create_btn1.setText("Create");
-        create_btn1.addActionListener(new java.awt.event.ActionListener() {
+        update_order.setText("Update");
+        update_order.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                create_btn1ActionPerformed(evt);
+                update_orderActionPerformed(evt);
             }
         });
-        jPanel5.add(create_btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 670, 103, 35));
+        jPanel5.add(update_order, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 670, 103, 35));
 
-        update_btn1.setText("Update");
-        update_btn1.addActionListener(new java.awt.event.ActionListener() {
+        delete_order.setText("Delete");
+        delete_order.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                update_btn1ActionPerformed(evt);
+                delete_orderActionPerformed(evt);
             }
         });
-        jPanel5.add(update_btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 670, 103, 35));
-
-        delete_btn1.setText("Delete");
-        delete_btn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                delete_btn1ActionPerformed(evt);
-            }
-        });
-        jPanel5.add(delete_btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 670, 103, 35));
+        jPanel5.add(delete_order, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 670, 103, 35));
 
         jLabel2.setFont(new java.awt.Font("Poppins", 0, 18)); // NOI18N
-        jLabel2.setText("CRUD Menu's Table");
+        jLabel2.setText("CRUD Menus Table");
         jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 200, 40));
 
         adminTabbed.addTab("Menu", jPanel5);
@@ -283,16 +295,12 @@ public class AdminPage extends javax.swing.JFrame {
             }
         ));
         jScrollPane3.setViewportView(accountTable2);
+        if (accountTable2.getColumnModel().getColumnCount() > 0) {
+            accountTable2.getColumnModel().getColumn(3).setHeaderValue("Address");
+            accountTable2.getColumnModel().getColumn(4).setHeaderValue("Handphone");
+        }
 
         jPanel6.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 604, 472));
-
-        display_btnFeed.setText("Display");
-        display_btnFeed.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                display_btnFeedActionPerformed(evt);
-            }
-        });
-        jPanel6.add(display_btnFeed, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 670, 103, 35));
 
         create_btnFeed.setText("Create");
         create_btnFeed.addActionListener(new java.awt.event.ActionListener() {
@@ -308,7 +316,7 @@ public class AdminPage extends javax.swing.JFrame {
                 update_btnFeedActionPerformed(evt);
             }
         });
-        jPanel6.add(update_btnFeed, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 670, 103, 35));
+        jPanel6.add(update_btnFeed, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 670, 103, 35));
 
         delete_btnFeed.setText("Delete");
         delete_btnFeed.addActionListener(new java.awt.event.ActionListener() {
@@ -316,13 +324,62 @@ public class AdminPage extends javax.swing.JFrame {
                 delete_btnFeedActionPerformed(evt);
             }
         });
-        jPanel6.add(delete_btnFeed, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 670, 103, 35));
+        jPanel6.add(delete_btnFeed, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 670, 103, 35));
 
         jLabel3.setFont(new java.awt.Font("Poppins", 0, 18)); // NOI18N
         jLabel3.setText("CRUD Feedback's Table");
         jPanel6.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 220, 40));
 
         adminTabbed.addTab("Feedback", jPanel6);
+
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        accountTable3.setForeground(new java.awt.Color(204, 153, 0));
+        accountTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "ID Order", "ID_Account", "Order details", "Price"
+            }
+        ));
+        jScrollPane4.setViewportView(accountTable3);
+
+        jPanel7.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 604, 472));
+
+        create_btnOrder.setText("Create");
+        create_btnOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                create_btnOrderActionPerformed(evt);
+            }
+        });
+        jPanel7.add(create_btnOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 670, 103, 35));
+
+        update_btnOrder.setText("Update");
+        update_btnOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                update_btnOrderActionPerformed(evt);
+            }
+        });
+        jPanel7.add(update_btnOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 670, 103, 35));
+
+        delete_btnOrder.setText("Delete");
+        delete_btnOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delete_btnOrderActionPerformed(evt);
+            }
+        });
+        jPanel7.add(delete_btnOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 670, 103, 35));
+
+        jLabel5.setFont(new java.awt.Font("Poppins", 0, 18)); // NOI18N
+        jLabel5.setText("CRUD Order's Table");
+        jPanel7.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 220, 40));
+
+        adminTabbed.addTab("Order", jPanel7);
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 102));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -333,7 +390,7 @@ public class AdminPage extends javax.swing.JFrame {
                 logoff_btnActionPerformed(evt);
             }
         });
-        jPanel2.add(logoff_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 480, 100, 50));
+        jPanel2.add(logoff_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 670, 100, 50));
 
         menu_btn.setText("Menu");
         menu_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -341,7 +398,7 @@ public class AdminPage extends javax.swing.JFrame {
                 menu_btnActionPerformed(evt);
             }
         });
-        jPanel2.add(menu_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, 100, 50));
+        jPanel2.add(menu_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 550, 100, 50));
 
         receipt_btn.setText("Feedback");
         receipt_btn.addActionListener(new java.awt.event.ActionListener() {
@@ -349,7 +406,7 @@ public class AdminPage extends javax.swing.JFrame {
                 receipt_btnActionPerformed(evt);
             }
         });
-        jPanel2.add(receipt_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 100, 50));
+        jPanel2.add(receipt_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 100, 50));
 
         lbl_clock.setBackground(new java.awt.Color(255, 255, 255));
         lbl_clock.setFont(new java.awt.Font("Futura Bk BT", 0, 24)); // NOI18N
@@ -361,6 +418,22 @@ public class AdminPage extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Admin Page");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
+
+        account_btn.setText("Account");
+        account_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                account_btnActionPerformed(evt);
+            }
+        });
+        jPanel2.add(account_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, 100, 50));
+
+        Order_btn.setText("Order");
+        Order_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Order_btnActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Order_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 440, 100, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -386,10 +459,6 @@ public class AdminPage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void display_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_display_btnActionPerformed
-        displayAcc();
-    }//GEN-LAST:event_display_btnActionPerformed
 
     private void logoff_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoff_btnActionPerformed
 
@@ -496,25 +565,73 @@ public class AdminPage extends javax.swing.JFrame {
         adminTabbed.setSelectedIndex(2);
     }//GEN-LAST:event_receipt_btnActionPerformed
 
-    private void display_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_display_btn1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_display_btn1ActionPerformed
+    private void create_orderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_create_orderActionPerformed
+        String nama_menu;
+        int harga, stok;
 
-    private void create_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_create_btn1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_create_btn1ActionPerformed
+        nama_menu = JOptionPane.showInputDialog("Masukkan nama menu yang diinput : ");
+        harga = Integer.parseInt(JOptionPane.showInputDialog("Masukkan harga yang diinput : "));
+        stok = Integer.parseInt(JOptionPane.showInputDialog("Masukkan stok yang diinput : "));
+        
+        
+        
 
-    private void update_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update_btn1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_update_btn1ActionPerformed
+        if (nama_menu != null && harga != 0 && stok != 0) {
+            
+            Menu menu = new Menu();
+            menu.setNama_menu(nama_menu);
+            menu.setHarga(harga);
+            menu.setStok(stok);
+            
+            
+            
 
-    private void delete_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete_btn1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_delete_btn1ActionPerformed
+            ControllerMenu cmdMenu = new ControllerMenu();
+            int result = cmdMenu.saveMenu(menu);
 
-    private void display_btnFeedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_display_btnFeedActionPerformed
-        displayFeed();
-    }//GEN-LAST:event_display_btnFeedActionPerformed
+            if (result > 0) {
+                // Account saved successfully
+                displayMenu();
+            } else {
+                // Error occurred while saving account
+                JOptionPane.showMessageDialog(null, "Terjadi kesalahan. Mohon ulang kembali", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            // User membatalkan input atau meninggalkan textfield kosong
+            JOptionPane.showMessageDialog(null, "Pembuatan akun dibatalkan atau textfield kosong.", "Canceled or Empty Fields", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_create_orderActionPerformed
+
+    private void update_orderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update_orderActionPerformed
+        ControllerMenu cmdMenu = new ControllerMenu();
+        Menu menu = new Menu();
+        int result = cmdMenu.updateMenu(menu);
+
+        if (result > 0) {
+            // Feedback updated successfully
+            displayMenu();
+        } else {
+            // Error occurred while updating feedback
+            JOptionPane.showMessageDialog(null, "Terjadi kesalahan. Mohon ulang kembali", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_update_orderActionPerformed
+
+    private void delete_orderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete_orderActionPerformed
+        String ID_menu;
+        ID_menu = JOptionPane.showInputDialog("Masukkan ID menu yang akan dihapus : ");
+
+        // Convert ID_feedback to int
+        int ID_menuInt = Integer.parseInt(ID_menu);
+
+        ControllerMenu cmdMenu = new ControllerMenu();
+        int result = cmdMenu.deleteMenu(ID_menuInt);
+
+        if (result > 0) {
+           displayMenu();
+        } else {
+           JOptionPane.showMessageDialog(null, "Terjadi kesalahan. Mohon ulang kembali", "Error", JOptionPane.ERROR_MESSAGE);
+        }   
+    }//GEN-LAST:event_delete_orderActionPerformed
 
     private void create_btnFeedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_create_btnFeedActionPerformed
         String name, feedback, address, handphone;
@@ -543,7 +660,7 @@ public class AdminPage extends javax.swing.JFrame {
 
             if (result > 0) {
                 // Account saved successfully
-                displayAcc();
+                displayFeed();
             } else {
                 // Error occurred while saving account
                 JOptionPane.showMessageDialog(null, "Terjadi kesalahan. Mohon ulang kembali", "Error", JOptionPane.ERROR_MESSAGE);
@@ -574,7 +691,7 @@ public class AdminPage extends javax.swing.JFrame {
         String ID_feedback;
         ID_feedback = JOptionPane.showInputDialog("Masukkan ID feedback yang akan dihapus : ");
 
-        // Convert ID_feedback to int
+        // konversi ID_feedback ke int
         int ID_feedbackInt = Integer.parseInt(ID_feedback);
 
         ControllerFeedback cmdFeedback = new ControllerFeedback();
@@ -586,6 +703,92 @@ public class AdminPage extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null, "Terjadi kesalahan. Mohon ulang kembali", "Error", JOptionPane.ERROR_MESSAGE);
         }   
     }//GEN-LAST:event_delete_btnFeedActionPerformed
+
+    private void account_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_account_btnActionPerformed
+        adminTabbed.setSelectedIndex(0);
+    }//GEN-LAST:event_account_btnActionPerformed
+
+    private void create_btnOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_create_btnOrderActionPerformed
+        int ID_pelanggan;
+        String order_detail;
+        int total;
+        
+        ID_pelanggan = Integer.parseInt(JOptionPane.showInputDialog("Masukkan ID account yang diinput : "));
+        order_detail = JOptionPane.showInputDialog("Masukkan detail order yang diinput : ");
+        total = Integer.parseInt(JOptionPane.showInputDialog("Masukkan total yang diinput : "));
+
+        
+
+        Account acc = new Account();
+        ControllerOrder ctrlorder = new ControllerOrder();
+
+        OrderAcc order = new OrderAcc();
+        order.setID_pelanggan(ID_pelanggan);
+        order.setOrder_detail(order_detail);
+        order.setTotal(total);
+        
+
+        
+        int result = ctrlorder.saveOrder(order);
+
+        if (result > 0) {
+            // Order berhasil ditambah
+            JOptionPane.showMessageDialog(null, "Order added successfully!");
+            
+            displayOrders();
+        } else {
+            // Error
+            JOptionPane.showMessageDialog(null, "Failed to add order!", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    
+
+    displayOrders();
+
+    }//GEN-LAST:event_create_btnOrderActionPerformed
+
+    private void update_btnOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update_btnOrderActionPerformed
+        ControllerOrder controllerOrder = new ControllerOrder();
+        OrderAcc order = new OrderAcc();
+
+        int result = controllerOrder.updateOrder(order);
+
+        if (result > 0) {
+            // Order updated successfully
+            JOptionPane.showMessageDialog(null, "Order updated successfully!");
+            // Refresh the order list
+            displayOrders();
+        } else {
+            // Error occurred while updating order
+            JOptionPane.showMessageDialog(null, "Failed to update order!", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+    }//GEN-LAST:event_update_btnOrderActionPerformed
+
+    private void delete_btnOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete_btnOrderActionPerformed
+        String ID_order;
+        ID_order = JOptionPane.showInputDialog("Enter the order ID to delete: ");
+
+        // Convert ID_order to int
+        int ID_orderInt = Integer.parseInt(ID_order);
+
+        ControllerOrder controllerOrder = new ControllerOrder();
+        int result = controllerOrder.deleteOrder(ID_orderInt);
+
+        if (result > 0) {
+            // Order deleted successfully
+            JOptionPane.showMessageDialog(null, "Order deleted successfully!");
+            // Refresh the order list
+            displayOrders();
+        } else {
+            // Error occurred while deleting order
+            JOptionPane.showMessageDialog(null, "Failed to delete order!", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+    }//GEN-LAST:event_delete_btnOrderActionPerformed
+
+    private void Order_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Order_btnActionPerformed
+        adminTabbed.setSelectedIndex(3);
+    }//GEN-LAST:event_Order_btnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -623,36 +826,42 @@ public class AdminPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Order_btn;
     private javax.swing.JTable accountTable;
     private javax.swing.JTable accountTable1;
     private javax.swing.JTable accountTable2;
+    private javax.swing.JTable accountTable3;
+    private javax.swing.JButton account_btn;
     private javax.swing.JTabbedPane adminTabbed;
     private javax.swing.JButton create_btn;
-    private javax.swing.JButton create_btn1;
     private javax.swing.JButton create_btnFeed;
+    private javax.swing.JButton create_btnOrder;
+    private javax.swing.JButton create_order;
     private javax.swing.JButton delete_btn;
-    private javax.swing.JButton delete_btn1;
     private javax.swing.JButton delete_btnFeed;
-    private javax.swing.JButton display_btn;
-    private javax.swing.JButton display_btn1;
-    private javax.swing.JButton display_btnFeed;
+    private javax.swing.JButton delete_btnOrder;
+    private javax.swing.JButton delete_order;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JLabel lbl_clock;
     private javax.swing.JButton logoff_btn;
     private javax.swing.JButton menu_btn;
     private javax.swing.JButton receipt_btn;
     private javax.swing.JButton update_btn;
-    private javax.swing.JButton update_btn1;
     private javax.swing.JButton update_btnFeed;
+    private javax.swing.JButton update_btnOrder;
+    private javax.swing.JButton update_order;
     // End of variables declaration//GEN-END:variables
 }
