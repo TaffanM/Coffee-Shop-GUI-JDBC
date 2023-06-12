@@ -33,11 +33,11 @@ public class ControllerOrder {
         String pilihDrink = cb_drink.getSelectedItem().toString();
         
         if (pilihPatisserie.equals("None") && pilihDrink.equals("None")) {
-            JOptionPane.showMessageDialog(null, "Please order minimal one of our menu");
+            JOptionPane.showMessageDialog(order, "Please order minimal one of our menu");
             return;
         } else {
             
-            int choice = JOptionPane.showConfirmDialog(null, "Are you sure your data is correct?", "Confirmation", JOptionPane.YES_NO_OPTION);
+            int choice = JOptionPane.showConfirmDialog(order, "Are you sure your data is correct?", "Confirmation", JOptionPane.YES_NO_OPTION);
             if (choice == JOptionPane.YES_OPTION) {
 
                 // Mendapatkan jenis makanan dan kuantitas
@@ -54,8 +54,37 @@ public class ControllerOrder {
                 int patisserieTotalPrice = patisserieQty * patisseriePrice;
                 int drinkTotalPrice = drinkQty * drinkPrice;
                 int totalPrice = patisserieTotalPrice + drinkTotalPrice;
+                
+                
+                try {
+                    // Mendapatkan stok terakhir di database
+                    int patisserieStock = getPatisserieStock(selectedPatisserie, conn);
+                    int drinkStock = getDrinkStock(selectedDrink, conn);
+                    System.out.println(patisserieStock);
+                    System.out.println(drinkStock);
+                    // cek apakah stok tersedia
+                    if (!pilihPatisserie.equals("None") && patisserieQty > patisserieStock) {
+                        JOptionPane.showMessageDialog(order, "Sorry, the selected patisserie is out of stock");
+                        return;
+                    }
+                    if (!pilihDrink.equals("None") && drinkQty > drinkStock) {
+                        JOptionPane.showMessageDialog(order, "Sorry, the selected drink is out of stock");
+                        return;
+                    }
 
+                    
+                    // Operasi untuk mengurangi stok
+                    int updatedPatisserieStock = patisserieStock - patisserieQty;
+                    int updatedDrinkStock = drinkStock - drinkQty;
 
+                    // Update tabel menu dengan stok yang baru
+                    updatePatisserieStock(selectedPatisserie, updatedPatisserieStock, conn);
+                    updateDrinkStock(selectedDrink, updatedDrinkStock, conn);
+                } catch (SQLException ex) {
+                    Logger.getLogger(ControllerOrder.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
+               
 
                 String query = "INSERT INTO order_acc (ID_pelanggan, order_detail, total) VALUES (?, ?, ?)";
 
@@ -76,8 +105,8 @@ public class ControllerOrder {
                     ps.setString(2, selectedPatisserie + " - Quantity: " + patisserieQty + ", " + selectedDrink + " - Quantity: " + drinkQty);
                     ps.setInt(3, totalPrice);
 
-                    int rowsAffected = ps.executeUpdate();
-                    if (rowsAffected > 0) {
+                    int baris = ps.executeUpdate();
+                    if (baris > 0) {
                         conf.setLocationRelativeTo(order);
                         conf.setVisible(true);
                         Timer timer = new Timer(5000, e -> conf.dispose());
@@ -106,6 +135,52 @@ public class ControllerOrder {
     }
     
     
+    
+    
+    
+    // method untuk mendapatkan dan membedakan stok patisserie
+    private int getPatisserieStock(String patisserieName, Connection conn) throws SQLException {
+        String query = "SELECT stok FROM menu WHERE nama_menu = ?";
+        PreparedStatement ps = conn.prepareStatement(query);
+        ps.setString(1, patisserieName);
+        ResultSet rs = ps.executeQuery();
+        if (rs.next()) {
+            return rs.getInt("stok");
+        }
+        return 0;
+    }
+
+    // method untuk mendapatkan dan membedakan stok drink
+    private int getDrinkStock(String drinkName, Connection conn) throws SQLException {
+        String query = "SELECT stok FROM menu WHERE nama_menu = ?";
+        PreparedStatement ps = conn.prepareStatement(query);
+        ps.setString(1, drinkName);
+        ResultSet rs = ps.executeQuery();
+        if (rs.next()) {
+            return rs.getInt("stok");
+        }
+        return 0;
+    }
+
+    // method untuk update dan membedakan stok patisserie
+    private void updatePatisserieStock(String patisserieName, int newStock, Connection conn) throws SQLException {
+        String query = "UPDATE menu SET stok = ? WHERE nama_menu = ?";
+        PreparedStatement ps = conn.prepareStatement(query);
+        ps.setInt(1, newStock);
+        ps.setString(2, patisserieName);
+        ps.executeUpdate();
+    }
+
+    // method untuk update dan membedakan stok drink
+    private void updateDrinkStock(String drinkName, int newStock, Connection conn) throws SQLException {
+        String query = "UPDATE menu SET stok = ? WHERE nama_menu = ?";
+        PreparedStatement ps = conn.prepareStatement(query);
+        ps.setInt(1, newStock);
+        ps.setString(2, drinkName);
+        ps.executeUpdate();
+    }
+
+    // method untuk mendapatkan dan membedakan harga patisserie menu
     private int patisseriePriceDatabase(String selectedPatisserie, Connection conn) {
         int patisseriePrice = 0;
         try {
@@ -124,6 +199,7 @@ public class ControllerOrder {
         return patisseriePrice;
     }
 
+    // method untuk mendapatkan dan membedakan harga drink menu
     private int drinkPriceDatabase(String selectedDrink, Connection conn) {
         int drinkPrice = 0;
         try {
